@@ -4,26 +4,28 @@ export const GA_ID = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID ?? ''
 export const existsGaId = GA_ID !== ''
 
 declare global {
-    interface Window { gtag: any; }
+  interface Window {
+    gtag: any
+  }
 }
-window.gtag = window.gtag || {};
+window.gtag = window.gtag || {}
 
 // PVを測定する
 export const pageview = (path) => {
-    window.gtag('config', GA_ID, {
-        page_path: path,
-    })
+  window.gtag('config', GA_ID, {
+    page_path: path,
+  })
 }
 
 // GAイベントを発火させる
 export const event = ({ action, category, label, value = '' }) => {
-    if (!existsGaId) {
-        return
-    }
+  if (!existsGaId) {
+    return
+  }
 
-    window.gtag('event', action, {
-        event_category: category,
-        event_label: JSON.stringify(label),
-        value,
-    })
+  window.gtag('event', action, {
+    event_category: category,
+    event_label: JSON.stringify(label),
+    value,
+  })
 }

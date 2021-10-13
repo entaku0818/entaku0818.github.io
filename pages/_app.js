@@ -4,14 +4,14 @@ import usePageView from '../hocks/usePageView'
 import GoogleAnalytics from '../components/GoogleAnalytics'
 
 const App = ({ Component, pageProps }) => {
-    usePageView()
+  usePageView()
 
-    return (
-        <>
-            <GoogleAnalytics />
-            <Component {...pageProps} />
-        </>
-    )
+  return (
+    <>
+      <GoogleAnalytics />
+      <Component {...pageProps} />
+    </>
+  )
 }
 
 export default App
