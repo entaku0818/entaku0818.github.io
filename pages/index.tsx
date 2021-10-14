@@ -6,7 +6,7 @@ import { faTwitter, faGithub } from '@fortawesome/free-brands-svg-icons'
 export const Home = (): JSX.Element => (
   <div className="container">
     <Head>
-      <title>Portfoilo - entaku</title>
+      <title>Portfolio - entaku</title>
       <link rel="icon" href="/favicon.ico" />
     </Head>
     <header>
@@ -170,7 +170,7 @@ export const Home = (): JSX.Element => (
       .a:hover,
       .a:focus,
       .a:active {
-        text-dec  oration: underline;
+        text-decoration: underline;
       }
 
       .title {
