@@ -1,5 +1,5 @@
 import React from 'react'
-
+import '../styles/globals.css'
 import usePageView from '../hocks/usePageView'
 import GoogleAnalytics from '../components/GoogleAnalytics'
 
