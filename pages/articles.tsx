@@ -74,7 +74,7 @@ export const Articles = ({ articles }: Props): JSX.Element => (
   </div>
 )
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const res = await fetch(
     'https://sheets.googleapis.com/v4/spreadsheets/1S286LYrmDHOPjvZHQh8d2pSg_MVaZOb_Znr9zUahd2M/values/article?key=AIzaSyAxzVLiIMLhFGrQUeU0JH8sL-7-0o4iXxY'
   )
