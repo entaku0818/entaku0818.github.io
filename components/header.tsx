@@ -9,9 +9,9 @@ export const Header = (): JSX.Element => (
     </h1>
     <nav className="pc-nav">
       <a href="/">home</a>
-      {/*<a className={'ml-4'} href="/presentation">*/}
-      {/*  presentation*/}
-      {/*</a>*/}
+      <a className={'ml-4'} href="/articles">
+        articles
+      </a>
     </nav>
     <style jsx>{`
       header {

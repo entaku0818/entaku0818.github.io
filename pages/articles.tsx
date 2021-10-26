@@ -1,15 +1,28 @@
 import Head from 'next/head'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import Header from '../components/header'
+import Article, { ArticleType } from '../data_class/article'
+import ArticleCard from '../components/articleCard'
 
-export const Presentation = (): JSX.Element => (
+type Props = {
+  articles: Article[]
+}
+
+export const Articles = ({ articles }: Props): JSX.Element => (
   <div>
     <Head>
       <title>Portfolio - entaku</title>
       <link rel="icon" href="/favicon.ico" />
     </Head>
     <Header></Header>
-    <main></main>
+    <main>
+      <h2 className={'text-xl font-bold '}>👩🏻‍💻Articles</h2>
+      <section className="grid sm:grid-cols-2 md:grid-cols-3 mt-8 gap-x-8 gap-y-4">
+        {articles.map((article, index) => (
+          <ArticleCard article={article} key={index}></ArticleCard>
+        ))}
+      </section>
+    </main>
 
     <footer>Powered by entaku</footer>
 
@@ -48,24 +61,6 @@ export const Presentation = (): JSX.Element => (
         align-items: center;
       }
 
-      .card:hover,
-      .card:focus,
-      .card:active {
-        color: #0070f3;
-        border-color: #0070f3;
-      }
-
-      .card h3 {
-        margin: 0 0 1rem 0;
-        font-size: 1.5rem;
-      }
-
-      .card p {
-        margin: 0;
-        font-size: 1.25rem;
-        line-height: 1.5;
-      }
-
       @media (max-width: 600px) {
         .grid {
           width: 100%;
@@ -75,36 +70,31 @@ export const Presentation = (): JSX.Element => (
       * {
         box-sizing: border-box;
       }
-
-      header {
-        padding: 10px 4%;
-        position: fixed;
-        top: 0;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        background: #fff;
-      }
-
-      nav {
-        margin: 0 0 0 auto;
-      }
-    `}</style>
-
-    <style jsx global>{`
-      html,
-      body {
-        padding: 0;
-        margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-          Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
     `}</style>
   </div>
 )
 
-export default Presentation
+export async function getServerSideProps() {
+  const res = await fetch(
+    'https://sheets.googleapis.com/v4/spreadsheets/1S286LYrmDHOPjvZHQh8d2pSg_MVaZOb_Znr9zUahd2M/values/article?key=AIzaSyAxzVLiIMLhFGrQUeU0JH8sL-7-0o4iXxY'
+  )
+  const json = await res.json()
+
+  const x = await json.values.flatMap((elm) => {
+    const type: ArticleType = elm[1]
+    const obj = {
+      name: elm[0],
+      type: type,
+      url: elm[2],
+    }
+    const article = new Article(obj)
+    return article
+  })
+  return {
+    props: {
+      articles: JSON.parse(JSON.stringify(x)),
+    },
+  }
+}
+
+export default Articles
