@@ -40,7 +40,7 @@ export const Home = (): JSX.Element => (
         <div>
           <h2 className={'text-xl font-bold'}>👩🏻‍💻Work</h2>
 
-          <h3 className={'text-lg'}>CBCloud (2019/05〜)</h3>
+          <h3 className={'text-lg'}>CBCloud (2019/05〜2021/11)</h3>
           <a
             href="https://cb-cloud.com/"
             target="_blank"
@@ -50,7 +50,7 @@ export const Home = (): JSX.Element => (
           </a>
           <p>
             フリーランスドライバーと荷主を即時につなぐ配送マッチングプラットフォームを提供する。
-            最初はモバイルエンジニアとして参画し、webフロントやサーバーサイドなども経験しながらPMとして、開発施策の策定や施策によっては機能開発まで実施する
+            最初はモバイルエンジニアとして参画し、Webフロントやサーバーサイドなども経験しながらPMとして、開発施策の策定や施策によっては機能開発まで実施する
           </p>
           <ul className="list-disc m-6">
             <li>一般貨物運送事業者向けのSaasであるSmaRyuTruck開発</li>

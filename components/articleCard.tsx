@@ -30,6 +30,9 @@ function IconImage(articleType) {
     case '2':
       return <ZennIcon />
       break
+    case '3':
+      return <NoteIcon />
+      break
     default:
       return <QiitaIcon />
       break
@@ -40,6 +43,9 @@ function QiitaIcon() {
 }
 function ZennIcon() {
   return <img className={'h-6 w-6'} src={`/zenn.svg`} />
+}
+function NoteIcon() {
+  return <img className={'h-10 w-10'} src={`/note.svg`} />
 }
 
 export default ArticleCard
