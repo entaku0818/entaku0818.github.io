@@ -11,13 +11,13 @@ export const Home = (): JSX.Element => (
       <link rel="icon" href="/favicon.ico" />
     </Head>
     <Header />
-    <main>
+    <main className={'py-20 my-40 mx-20 lg:mx-20'}>
       <div className={'text-center'}>
         <h1 className="text-6xl  font-bold">entaku</h1>
         <p className="text-lg description">Mobile App Developer</p>
       </div>
       <section className={'mt-8'}>
-        <h2 className="text-xl font-bold">☎️ Contact information</h2>
+        <h2 className={'text-3xl font-bold'}>☎️ Contact information</h2>
         <p>
           <a
             href="https://twitter.com/entaku_0818"
@@ -37,93 +37,103 @@ export const Home = (): JSX.Element => (
       </section>
 
       <section className={'mt-8'}>
-        <div>
-          <h2 className={'text-xl font-bold'}>👩🏻‍💻Work</h2>
-
-          <h3 className={'text-lg'}>CBCloud (2019/05〜2021/11)</h3>
-          <a
-            href="https://cb-cloud.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            https://cb-cloud.com/
-          </a>
-          <p>
-            フリーランスドライバーと荷主を即時につなぐ配送マッチングプラットフォームを提供する。
-            最初はモバイルエンジニアとして参画し、Webフロントやサーバーサイドなども経験しながらPMとして、開発施策の策定や施策によっては機能開発まで実施する
-          </p>
-          <ul className="list-disc m-6">
-            <li>一般貨物運送事業者向けのSaasであるSmaRyuTruck開発</li>
-            <li>一般貨物向け配送依頼画面のリリース 2019/11</li>
-            <li>買い物アプリリリース - 2020/4 〜 2020/5</li>
-            <li>PickGo Business/Partner開発 - 2020/10-11〜</li>
-            <li>JAL航空便連携 2021/3</li>
-            <li>Flutterリプレイス 2021/4</li>
-          </ul>
-        </div>
-
-        <div className={'mt-4'}>
-          <h3 className={'text-lg'}>LifeSports (2018/03〜2019/04)</h3>
-          <a
-            href="https://lifesports.jp"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            https://lifesports.jp
-          </a>
-          <p>
-            仕事と自宅の往復をしてた辛い時期に、個人フットサルという、コートでそれぞれが集まってフットサルをするというイベントを見つけ通っていました。
-            そのフットサルの集まりがとても居心地がよく、その経験からそんな場所をもっと増やしていきたいのでスポーツ事業にエンジニアとして関わってみたいと考え、ライフスポーツへ転職。
-            主にユーザー数を増やすような既存機能の修正やコミュニティ機能の設計実装を実施した。
-          </p>
-        </div>
-
-        <div className={'mt-4'}>
-          <h3 className={'text-lg'}>
-            株式会社エーピーコミュニケーションズ (2013/09〜2018/02)
-          </h3>
-          <a
-            href="https://www.ap-com.co.jp"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            https://www.ap-com.co.jp
-          </a>
-          <h4>ネットワークエンジニア (2013/09〜2016/02)</h4>
-          <p>
-            大手NW事業会社
-            NWサービスの認証システムの開発と新たなシステムへのリプレイス作業を実施。
-            主に新しいNWサービスを導入する際のシステム設計/開発/検証/導入までのNW/サーバー設計をメインで担当。
-          </p>
-          <h4 className={'mt-2'}>
-            アプリケーションエンジニア (2016/03〜2018/02)
-          </h4>
-          <p>
-            主に教育事業会社や娯楽事業のサービス保守システムリプレイスなどを実施
-            CakePHP/Laravel/Spring/MySQL
-          </p>
-        </div>
-
-        <div className={'mt-4'}>
-          <h3 className={'text-lg'}>
-            日本ユニアンドソニック(2010/04〜2013/08)
-          </h3>
-          <a
-            href="https://www.sonic-square.co.jp/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            https://www.sonic-square.co.jp/
-          </a>
-          <p>レンタル事業会社へ派遣され、システム開発を従事</p>
-        </div>
+        <h2 className={'text-3xl font-bold'}>👩🏻‍💻Work</h2>
+        <ul className={'mt-4 timeline'}>
+          <li>
+            <p className="timeline-date">2019/05〜2021/11</p>
+            <div className={'timeline-content'}>
+              <h3 className={'text-lg font-bold mt-8'}>CBCloud </h3>
+              <a
+                href="https://cb-cloud.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                https://cb-cloud.com/
+              </a>
+              <p>
+                フリーランスドライバーと荷主を即時につなぐ配送マッチングプラットフォームを提供する。
+                最初はモバイルエンジニアとして参画し、Webフロントやサーバーサイドなども経験しながらPMとして、開発施策の策定や施策によっては機能開発まで実施する
+              </p>
+              <ul className="list-disc m-6">
+                <li>一般貨物運送事業者向けのSaasであるSmaRyuTruck開発</li>
+                <li>一般貨物向け配送依頼画面のリリース 2019/11</li>
+                <li>買い物アプリリリース - 2020/4 〜 2020/5</li>
+                <li>PickGo Business/Partner開発 - 2020/10-11〜</li>
+                <li>JAL航空便連携 2021/3</li>
+                <li>Flutterリプレイス 2021/4</li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <p className="timeline-date">2018/03〜2019/04</p>
+            <div className={'timeline-content'}>
+              <h3 className={'text-lg font-bold mt-8'}>LifeSports</h3>
+              <a
+                href="https://lifesports.jp"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                https://lifesports.jp
+              </a>
+              <p>
+                仕事と自宅の往復をしてた辛い時期に、個人フットサルという、コートでそれぞれが集まってフットサルをするというイベントを見つけ通っていました。
+                そのフットサルの集まりがとても居心地がよく、その経験からそんな場所をもっと増やしていきたいのでスポーツ事業にエンジニアとして関わってみたいと考え、ライフスポーツへ転職。
+                主にユーザー数を増やすような既存機能の修正やコミュニティ機能の設計実装を実施した。
+              </p>
+            </div>
+          </li>
+          <li>
+            <p className="timeline-date">2013/09〜2018/02</p>
+            <div className={'timeline-content'}>
+              <h3 className={'text-lg font-bold mt-8'}>
+                株式会社エーピーコミュニケーションズ
+              </h3>
+              <a
+                href="https://www.ap-com.co.jp"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                https://www.ap-com.co.jp
+              </a>
+              <h4>ネットワークエンジニア (2013/09〜2016/02)</h4>
+              <p>
+                大手NW事業会社
+                NWサービスの認証システムの開発と新たなシステムへのリプレイス作業を実施。
+                主に新しいNWサービスを導入する際のシステム設計/開発/検証/導入までのNW/サーバー設計をメインで担当。
+              </p>
+              <h4 className={'mt-2'}>
+                アプリケーションエンジニア (2016/03〜2018/02)
+              </h4>
+              <p>
+                主に教育事業会社や娯楽事業のサービス保守システムリプレイスなどを実施
+                CakePHP/Laravel/Spring/MySQL
+              </p>
+            </div>
+          </li>
+          <li>
+            <p className="timeline-date">2010/04〜2013/08</p>
+            <div className={'timeline-content'}>
+              <h3 className={'text-lg font-bold mt-8'}>
+                日本ユニアンドソニック
+              </h3>
+              <a
+                href="https://www.sonic-square.co.jp/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                https://www.sonic-square.co.jp/
+              </a>
+              <p>レンタル事業会社へ派遣され、システム開発を従事</p>
+            </div>
+          </li>
+        </ul>
       </section>
       <section className={'mt-8'}>
-        <h2 className="text-xl">🗣 Languages</h2>
+        <h2 className={'text-3xl font-bold'}>🗣 Languages</h2>
         <p>日本語</p>
       </section>
       <section className={'mt-8'}>
-        <h2 className="text-xl">📚Education</h2>
+        <h2 className={'text-3xl font-bold'}>📚Education</h2>
         <p>
           <a href="https://bbt.ac/" rel="noopener noreferrer">
             ビジネスブレイクスルー大学
@@ -144,12 +154,10 @@ export const Home = (): JSX.Element => (
       }
 
       main {
-        padding: 5rem 0;
         flex: 1;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        margin: 10%;
       }
 
       footer {
@@ -193,15 +201,6 @@ export const Home = (): JSX.Element => (
         font-size: 4rem;
       }
 
-      code {
-        background: #fafafa;
-        border-radius: 5px;
-        padding: 0.75rem;
-        font-size: 1.1rem;
-        font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-          DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-      }
-
       header {
         padding: 10px 4%;
         position: fixed;
@@ -214,6 +213,47 @@ export const Home = (): JSX.Element => (
 
       nav {
         margin: 0 0 0 auto;
+      }
+
+      .timeline {
+        list-style: none;
+      }
+
+      .timeline > li {
+        margin-bottom: 60px;
+      }
+
+      /* for Desktop */
+      @media (min-width: 640px) {
+        .timeline > li {
+          overflow: hidden;
+          margin: 0;
+          position: relative;
+        }
+
+        .timeline-date {
+          width: 110px;
+          float: left;
+          margin-top: 20px;
+        }
+
+        .timeline-content {
+          width: 75%;
+          float: left;
+          border-left: 3px #e5e5d1 solid;
+          padding-left: 30px;
+        }
+
+        .timeline-content:before {
+          content: '';
+          width: 12px;
+          height: 12px;
+          background: #6f86c1;
+          position: absolute;
+          left: 106px;
+          top: 36px;
+          border-radius: 100%;
+        }
       }
     `}</style>
 
