@@ -3,12 +3,14 @@ import '@fortawesome/fontawesome-svg-core/styles.css'
 import Header from '../components/header'
 import Article, { ArticleType } from '../data_class/article'
 import ArticleCard from '../components/articleCard'
+import History from '../components/history'
 
 type Props = {
   articles: Article[]
+  zenns: Article[]
 }
 
-export const Articles = ({ articles }: Props): JSX.Element => (
+export const Articles = ({ articles, zenns }: Props): JSX.Element => (
   <div>
     <Head>
       <title>Portfolio - entaku</title>
@@ -16,6 +18,8 @@ export const Articles = ({ articles }: Props): JSX.Element => (
     </Head>
     <Header></Header>
     <main>
+      <h2 className={'text-xl font-bold '}>👩🏻‍💻Zenn</h2>
+      <History articles={zenns} />
       <h2 className={'text-xl font-bold '}>👩🏻‍💻Articles</h2>
       <section className="grid sm:grid-cols-2 md:grid-cols-3 mt-8 gap-x-8 gap-y-4">
         {articles.map((article, index) => (
@@ -90,9 +94,22 @@ export async function getStaticProps() {
     const article = new Article(obj)
     return article
   })
+
+  const y = await json.values.flatMap((elm) => {
+    const type: ArticleType = elm[1]
+    const obj = {
+      name: elm[0],
+      type: type,
+      url: elm[2],
+      created: elm[3],
+    }
+    const article = new Article(obj)
+    return article
+  })
   return {
     props: {
       articles: JSON.parse(JSON.stringify(x)),
+      zenns: JSON.parse(JSON.stringify(y)),
     },
   }
 }

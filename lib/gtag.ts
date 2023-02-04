@@ -9,7 +9,6 @@ declare global {
   }
 }
 
-
 // PVを測定する
 export const pageview = (path) => {
   window.gtag = window.gtag || {}

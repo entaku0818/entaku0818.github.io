@@ -9,7 +9,7 @@ class ArticleCard extends React.Component<Props> {
   render() {
     return (
       <Link href={this.props.article.url}>
-        <div className="cursor-pointer shadow-lg flex items-stretch">
+        <div className="cursor-pointer shadow-lg flex  items-stretch h-24">
           <div className="w-10 flex-none flex justify-center items-center">
             <IconImage articleType={this.props.article.type} />
           </div>
