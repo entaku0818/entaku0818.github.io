@@ -43,15 +43,19 @@ export const Home = (): JSX.Element => (
           <li>
             <p className="timeline-date">2021/12~</p>
             <div className={'timeline-content'}>
-              <h3 className={'text-lg font-bold mt-8'}>新しい会社 </h3>
+              <h3 className={'text-lg font-bold mt-8'}>株式会社Voicy</h3>
               <a
-                href="https://cb-cloud.com/"
+                href="https://voicy.jp/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                https://cb-cloud.com/
+                https://voicy.jp/
               </a>
-              <p>新しい会社の職務内容をここに記入してください。</p>
+              <p>
+                音声配信プラットフォームを提供。
+                主にiOSエンジニアとして音声配信するパーソナリティアプリの開発を実施している。
+                またスクラムマスターとして、スクラム開発の主導を実施。
+              </p>
             </div>
           </li>
           <li>
