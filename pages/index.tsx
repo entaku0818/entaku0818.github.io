@@ -11,11 +11,12 @@ export const Home = (): JSX.Element => (
       <link rel="icon" href="/favicon.ico" />
     </Head>
     <Header />
-    <main className={'py-20 my-40 mx-20 lg:mx-20'}>
+    <main className={'py-20 my-40 mx-10 lg:mx-10'}>
       <div className={'text-center'}>
         <h1 className="text-6xl  font-bold">entaku</h1>
         <p className="text-lg description">Mobile App Developer</p>
       </div>
+
       <section className={'mt-8'}>
         <h2 className={'text-3xl font-bold'}>☎️ Contact information</h2>
         <p>
@@ -40,6 +41,20 @@ export const Home = (): JSX.Element => (
         <h2 className={'text-3xl font-bold'}>👩🏻‍💻Work</h2>
         <ul className={'mt-4 timeline'}>
           <li>
+            <p className="timeline-date">2021/12~</p>
+            <div className={'timeline-content'}>
+              <h3 className={'text-lg font-bold mt-8'}>新しい会社 </h3>
+              <a
+                href="https://cb-cloud.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                https://cb-cloud.com/
+              </a>
+              <p>新しい会社の職務内容をここに記入してください。</p>
+            </div>
+          </li>
+          <li>
             <p className="timeline-date">2019/05〜2021/11</p>
             <div className={'timeline-content'}>
               <h3 className={'text-lg font-bold mt-8'}>CBCloud </h3>
@@ -51,17 +66,10 @@ export const Home = (): JSX.Element => (
                 https://cb-cloud.com/
               </a>
               <p>
-                フリーランスドライバーと荷主を即時につなぐ配送マッチングプラットフォームを提供する。
-                最初はモバイルエンジニアとして参画し、Webフロントやサーバーサイドなども経験しながらPMとして、開発施策の策定や施策によっては機能開発まで実施する
+                フリーランスドライバーと荷主をつなぐ配送マッチングプラットフォームを提供しています。最初はモバイルエンジニアとして参画し、Webフロントエンドやサーバーサイドなどを経験し、その後PMとして開発施策の策定を行い、時には機能開発まで実施しました。
+                当社では、一般貨物運送事業者向けのSaaS「SmaRyuTruck」を開発し、一般貨物向けの配送依頼画面を2019年11月にリリースしました。また、2020年4月から5月にかけて買い物アプリをリリースし、2020年10月から11月にかけてPickGo
+                Business/Partnerを開発しました。2021年3月にはJAL航空便との連携を実現し、2021年4月にはFlutterのリプレースを行いました。
               </p>
-              <ul className="list-disc m-6">
-                <li>一般貨物運送事業者向けのSaasであるSmaRyuTruck開発</li>
-                <li>一般貨物向け配送依頼画面のリリース 2019/11</li>
-                <li>買い物アプリリリース - 2020/4 〜 2020/5</li>
-                <li>PickGo Business/Partner開発 - 2020/10-11〜</li>
-                <li>JAL航空便連携 2021/3</li>
-                <li>Flutterリプレイス 2021/4</li>
-              </ul>
             </div>
           </li>
           <li>
@@ -76,7 +84,7 @@ export const Home = (): JSX.Element => (
                 https://lifesports.jp
               </a>
               <p>
-                仕事と自宅の往復をしてた辛い時期に、個人フットサルという、コートでそれぞれが集まってフットサルをするというイベントを見つけ通っていました。
+                仕事と自宅の往復をしてた辛い時期に、個人フットサルという、コートでそれぞれが集まってフットサルをするという
                 そのフットサルの集まりがとても居心地がよく、その経験からそんな場所をもっと増やしていきたいのでスポーツ事業にエンジニアとして関わってみたいと考え、ライフスポーツへ転職。
                 主にユーザー数を増やすような既存機能の修正やコミュニティ機能の設計実装を実施した。
               </p>
@@ -85,9 +93,7 @@ export const Home = (): JSX.Element => (
           <li>
             <p className="timeline-date">2013/09〜2018/02</p>
             <div className={'timeline-content'}>
-              <h3 className={'text-lg font-bold mt-8'}>
-                株式会社エーピーコミュニケーションズ
-              </h3>
+              <h3 className={'text-lg font-bold mt-8'}>中小SIer</h3>
               <a
                 href="https://www.ap-com.co.jp"
                 target="_blank"
@@ -95,35 +101,10 @@ export const Home = (): JSX.Element => (
               >
                 https://www.ap-com.co.jp
               </a>
-              <h4>ネットワークエンジニア (2013/09〜2016/02)</h4>
               <p>
-                大手NW事業会社
-                NWサービスの認証システムの開発と新たなシステムへのリプレイス作業を実施。
-                主に新しいNWサービスを導入する際のシステム設計/開発/検証/導入までのNW/サーバー設計をメインで担当。
+                2010年から2018年まで、株式会社エーピーコミュニケーションズで、ネットワークエンジニアとして業務に従事しました。大手NW事業会社の認証システムの開発や新しいNWサービスの導入に関するシステム設計、開発、検証、導入までのNW/サーバー設計を担当し、顧客から高い評価を得ました。また、アプリケーションエンジニアとして、教育事業会社や娯楽事業のサービス保守システムリプレイスなど、さまざまなプロジェクトを担当し、高い技術力とプロジェクトマネジメント能力を発揮しました。
+                ネットワークエンジニアとしての経験から、幅広い業務を担当できるスキルを持ち合わせています。その一方で、アプリケーションエンジニアとしての経験もあり、技術力とプロジェクトマネジメント能力の両面で高い成果を上げました。加えて、CakePHP、Laravel、Spring、MySQLなど、幅広い技術スタックを扱うことができます。
               </p>
-              <h4 className={'mt-2'}>
-                アプリケーションエンジニア (2016/03〜2018/02)
-              </h4>
-              <p>
-                主に教育事業会社や娯楽事業のサービス保守システムリプレイスなどを実施
-                CakePHP/Laravel/Spring/MySQL
-              </p>
-            </div>
-          </li>
-          <li>
-            <p className="timeline-date">2010/04〜2013/08</p>
-            <div className={'timeline-content'}>
-              <h3 className={'text-lg font-bold mt-8'}>
-                日本ユニアンドソニック
-              </h3>
-              <a
-                href="https://www.sonic-square.co.jp/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                https://www.sonic-square.co.jp/
-              </a>
-              <p>レンタル事業会社へ派遣され、システム開発を従事</p>
             </div>
           </li>
         </ul>
@@ -147,129 +128,151 @@ export const Home = (): JSX.Element => (
     <footer>Powered by entaku</footer>
 
     <style jsx>{`
-      .header-title {
-        font-family: Arial, cursive;
-        font-size: 36px;
-        height: min-content;
+      /* 色 */
+      :root {
+        --color-primary: #55acee;
+        --color-secondary: #f0f0f0;
+        --color-background: #55acee;
+        --color-text: #ffffff;
+        --color-link: #0070f3;
       }
 
-      main {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-      }
-
-      footer {
-        width: 100%;
-        height: 100px;
-        border-top: 1px solid #eaeaea;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      footer img {
-        margin-left: 0.5rem;
-      }
-
-      footer a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
-
-      .title a {
-        color: #0070f3;
-        text-decoration: none;
-      }
-
-      .a:hover,
-      .a:focus,
-      .a:active {
-        text-decoration: underline;
-      }
-
-      .title {
+      body {
+        background-color: var(--color-background);
+        color: var(--color-text);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 16px;
         margin: 0;
-        line-height: 1.15;
-        font-size: 4rem;
+        padding: 0;
       }
 
+      /* ヘッダー */
       header {
-        padding: 10px 4%;
+        background-color: var(--color-background);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        display: flex;
+        justify-content: space-between;
+        padding: 16px;
         position: fixed;
         top: 0;
         width: 100%;
-        display: flex;
-        align-items: center;
-        background: #fff;
+        z-index: 1;
+      }
+
+      .header-title {
+        font-size: 32px;
+        font-weight: bold;
       }
 
       nav {
-        margin: 0 0 0 auto;
+        margin-left: auto;
       }
 
-      .timeline {
+      nav a {
+        color: var(--color-text);
+        font-weight: bold;
+        margin-left: 16px;
+        text-decoration: none;
+      }
+
+      nav a:hover {
+        color: var(--color-link);
+      }
+
+      /* メインコンテンツ */
+      main {
+        margin-top: 72px;
+        padding: 0 16px;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-weight: bold;
+      }
+
+      h1 {
+        font-size: 48px;
+        margin-top: 48px;
+      }
+
+      h2 {
+        font-size: 36px;
+        margin-top: 32px;
+      }
+
+      h3 {
+        font-size: 24px;
+        margin-top: 24px;
+      }
+
+      ul {
         list-style: none;
-      }
-
-      .timeline > li {
-        margin-bottom: 60px;
-      }
-
-      /* for Desktop */
-      @media (min-width: 640px) {
-        .timeline > li {
-          overflow: hidden;
-          margin: 0;
-          position: relative;
-        }
-
-        .timeline-date {
-          width: 110px;
-          float: left;
-          margin-top: 20px;
-        }
-
-        .timeline-content {
-          width: 75%;
-          float: left;
-          border-left: 3px #e5e5d1 solid;
-          padding-left: 30px;
-        }
-
-        .timeline-content:before {
-          content: '';
-          width: 12px;
-          height: 12px;
-          background: #6f86c1;
-          position: absolute;
-          left: 106px;
-          top: 36px;
-          border-radius: 100%;
-        }
-      }
-    `}</style>
-
-    <style jsx global>{`
-      html,
-      body {
-        padding: 0;
         margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-          Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+        padding: 0;
       }
 
-      * {
-        box-sizing: border-box;
+      li {
+        margin-top: 16px;
+      }
+
+      a {
+        color: var(--color-link);
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .timeline-date {
+        color: var(--color-primary);
+        font-size: 16px;
+        font-weight: bold;
+        margin-right: 16px;
+      }
+
+      .timeline-content {
+        border-left: 4px solid var(--color-primary);
+        margin-left: 24px;
+        padding-left: 16px;
+      }
+
+      .timeline-content h3 {
+        margin-top: 0;
+      }
+
+      .timeline-content p {
+        margin-bottom: 8px;
+      }
+
+      /* フッター */
+      footer {
+        background-color: var(--color-secondary);
+        bottom: 0;
+        color: var(--color-text);
+        display: flex;
+        font-size: 14px;
+        height: 48px;
+        justify-content: center;
+        left: 0;
+        position: fixed;
+        right: 0;
+      }
+
+      footer a {
+        color: var(--color-link);
+      }
+
+      footer a:hover {
+        text-decoration: underline;
       }
     `}</style>
+
+    <style jsx global>{``}</style>
   </div>
 )
 
