@@ -20,14 +20,17 @@ export const Personal = (): JSX.Element => (
         <h2 className={'text-3xl font-bold'}>職場選びで大事にしたいこと</h2>
         <h3>事業内容</h3>
         <p>自分が利用しているサービスであること</p>
+        <p>または利用者に大きく共感できること</p>
         <h3>技術</h3>
-        <p>大きくこだわりないですが、</p>
+        <p>
+          大きくこだわりないですが、技術的意思決定がある程度委ねられていること。決定した内容に対して周囲が比較的協力的な体制が築けそうなことを期待してます。
+        </p>
         <h3>働く人</h3>
         <p>お互いにリスペクトできる関係性であること</p>
         <p>相手の話に耳を傾ける心の余裕があること</p>
         <h3>文化</h3>
         <p>それぞれのメンバーのオーナーシップを大切にする文化であること </p>
-        <p> オープンな文化であること </p>
+        <p>オープンな文化であること </p>
 
         <h3>労働環境</h3>
         <p>
@@ -37,6 +40,13 @@ export const Personal = (): JSX.Element => (
         <p>
           大きくこだわりないですが、給料に対して交渉できる環境があることを期待しています
         </p>
+      </section>
+      <section className={'mt-8'}>
+        <iframe
+          src="https://drive.google.com/file/d/1s9TGP2Z77jM-mMaqJWHdOhU9qzN_ZD9Z/preview"
+          width="640"
+          height="800"
+        ></iframe>
       </section>
     </main>
 
