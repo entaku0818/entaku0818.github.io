@@ -113,6 +113,43 @@ export const Home = (): JSX.Element => (
           </li>
         </ul>
       </section>
+
+      <section className={'mt-8'}>
+        <h2 className={'text-3xl font-bold'}>🤝 Side Projects </h2>
+        <ul className={'mt-4 timeline'}>
+          <li>
+            <p className="timeline-date">2023/03~</p>
+            <div className={'timeline-content'}>
+              <h3 className={'text-lg font-bold mt-8'}>linq社 iOSエンジニア</h3>
+              <a
+                href="https://linq.co.jp/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                https://linq.co.jp/
+              </a>
+              <p>位置情報共有アプリwhooのSwiftUI化を実施</p>
+            </div>
+          </li>
+          <li>
+            <p className="timeline-date">2022/11~2023/03</p>
+            <div className={'timeline-content'}>
+              <h3 className={'text-lg font-bold mt-8'}>ヘルスケアアプリ</h3>
+              <a
+                href="https://soxai.co.jp/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                https://soxai.co.jp/
+              </a>
+              <p>
+                quasarというマルチプラットフォーム開発技術で開発した。主に新アプリの画面リプレイスでヘルス画面などを担当した。
+                https://quasar.dev/
+              </p>
+            </div>
+          </li>
+        </ul>
+      </section>
       <section className={'mt-8'}>
         <h2 className={'text-3xl font-bold'}>🗣 Languages</h2>
         <p>日本語</p>
