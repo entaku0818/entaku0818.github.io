@@ -42,6 +42,63 @@ export const Personal = (): JSX.Element => (
         </p>
       </section>
       <section className={'mt-8'}>
+        <h2 className={'text-3xl font-bold'}>登壇経験</h2>
+        <ul>
+          <li>
+            <a href="https://iosdc.jp/2020/" target="_blank" rel="noreferrer">
+              iOSDC Japan 2020
+            </a>
+            <a
+              href="https://speakerdeck.com/entaku/droidkaigifalsegong-shi-ahuriteshi-meru-iosahuriosskomitutahefalsedao"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Speaker Deck
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://cw-engineers.connpass.com/event/146975/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              【増枠】Vue.jsアーキテクチャリング勉強会
+            </a>
+            <a
+              href="https://speakerdeck.com/entaku/vue-vuex-falseakitekutiyawan-quan-nili-jie-sita"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Speaker Deck
+            </a>
+          </li>
+          <li>
+            <a href="https://iosdc.jp/2021/" target="_blank" rel="noreferrer">
+              iOSDC Japan 2021
+            </a>
+            <a
+              href="https://speakerdeck.com/entaku/pickgo-for-partnerfalseyi-xing-fang-fa-karaxue-hu-ji-cun-falseneiteihuahuriwoflutterherihureisusurufang-fa"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Speaker Deck
+            </a>
+          </li>
+          <li>
+            <a href="https://iosdc.jp/2022/" target="_blank" rel="noreferrer">
+              iOSDC Japan 2022
+            </a>
+            <a
+              href="https://fortee.jp/iosdc-japan-2022/proposal/ee2ab807-9053-4779-84f9-ec9951f7cfc0"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Speaker Profile
+            </a>
+          </li>
+        </ul>
+      </section>
+      <section className={'mt-8'}>
         <iframe
           src="https://drive.google.com/file/d/1s9TGP2Z77jM-mMaqJWHdOhU9qzN_ZD9Z/preview"
           width="640"
