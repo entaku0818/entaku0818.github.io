@@ -3,7 +3,6 @@ import '@fortawesome/fontawesome-svg-core/styles.css'
 import Header from '../components/header'
 import Article, { ArticleType } from '../data_class/article'
 import ArticleCard from '../components/articleCard'
-import History from '../components/history'
 
 type Props = {
   articles: Article[]
@@ -11,70 +10,33 @@ type Props = {
 }
 
 export const Articles = ({ articles, zenns }: Props): JSX.Element => (
-  <div>
+  <div className="min-h-screen bg-gray-50">
     <Head>
       <title>Portfolio - entaku</title>
       <link rel="icon" href="/favicon.ico" />
     </Head>
-    <Header></Header>
-    <main>
-      <h2 className={'text-xl font-bold '}>👩🏻‍💻Zenn</h2>
-      <History articles={zenns} />
-      <h2 className={'text-xl font-bold '}>👩🏻‍💻Articles</h2>
-      <section className="grid sm:grid-cols-2 md:grid-cols-3 mt-8 gap-x-8 gap-y-4">
-        {articles.map((article, index) => (
-          <ArticleCard article={article} key={index}></ArticleCard>
-        ))}
-      </section>
+    <Header />
+    <main className="container mx-auto px-4 py-12 max-w-7xl">
+      <div className="space-y-12">
+        <section>
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 flex items-center gap-2">
+            <span className="text-2xl">👩🏻‍💻</span>
+            Articles
+          </h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[...articles, ...zenns].map((article, index) => (
+              <ArticleCard article={article} key={index} />
+            ))}
+          </div>
+        </section>
+      </div>
     </main>
 
-    <footer>Powered by entaku</footer>
-
-    <style jsx>{`
-      .header-title {
-        font-family: Arial, cursive;
-        font-size: 36px;
-        height: min-content;
-      }
-
-      main {
-        padding: 5rem 0;
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin: 10%;
-      }
-
-      footer {
-        width: 100%;
-        height: 100px;
-        border-top: 1px solid #eaeaea;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      footer img {
-        margin-left: 0.5rem;
-      }
-
-      footer a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      @media (max-width: 600px) {
-        .grid {
-          width: 100%;
-          flex-direction: column;
-        }
-      }
-      * {
-        box-sizing: border-box;
-      }
-    `}</style>
+    <footer className="bg-white border-t border-gray-200 py-8 mt-16">
+      <div className="container mx-auto px-4 text-center text-gray-600">
+        Powered by entaku
+      </div>
+    </footer>
   </div>
 )
 
