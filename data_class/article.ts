@@ -8,6 +8,6 @@ class Article {
   }
 }
 
-export type ArticleType = 1 | 2
+export type ArticleType = 'Qiita' | 'Zenn' | 'Note'
 
 export default Article
