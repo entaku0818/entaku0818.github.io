@@ -30,7 +30,7 @@ export const Home = (): JSX.Element => (
               <FontAwesomeIcon size="2x" icon={faTwitter} />
             </a>
             <a
-              href="https://github.com/entaku_0818"
+              href="https://github.com/entaku0818"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-blue-200 transition-colors"
@@ -139,10 +139,78 @@ export const Home = (): JSX.Element => (
         </div>
       </section>
 
+      {/* Community Section */}
+      <section className="mb-20">
+        <h2 className="text-4xl font-bold text-gray-800 mb-8">コミュニティ活動</h2>
+        <div className="bg-white rounded-xl p-8 shadow-lg">
+          <div className="flex justify-between items-start mb-4">
+            <h3 className="text-xl font-bold text-blue-700">Swift愛好会</h3>
+            <a
+              href="https://love-swift.connpass.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500 hover:text-blue-700"
+            >
+              connpass →
+            </a>
+          </div>
+          <p className="text-gray-700">
+            Swiftエンジニア2,200名以上が参加するコミュニティの運営メンバー。月1〜2回のペースで勉強会を企画・開催（vol.98まで継続中）。
+          </p>
+        </div>
+      </section>
+
       {/* Work Experience Section */}
       <section className="mb-20">
         <h2 className="text-4xl font-bold text-gray-800 mb-8">職歴</h2>
         <div className="space-y-12">
+          {/* TVer */}
+          <div className="bg-white rounded-xl p-8 shadow-lg">
+            <div className="flex justify-between items-start mb-6">
+              <div>
+                <h3 className="text-2xl font-bold text-blue-700">TVer</h3>
+                <p className="text-gray-600">2025/01 - 現在</p>
+              </div>
+              <a
+                href="https://tver.jp/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-500 hover:text-blue-700"
+              >
+                Website →
+              </a>
+            </div>
+            <div className="space-y-4">
+              <div>
+                <h4 className="text-lg font-semibold text-gray-800 mb-2">
+                  プロジェクト概要
+                </h4>
+                <p className="text-gray-700">
+                  日本最大級の民放公式テレビポータル「TVer」にて、iOSリードエンジニアとして参画。動画配信プラットフォームの開発・改善を担当。
+                </p>
+              </div>
+              <div>
+                <h4 className="text-lg font-semibold text-gray-800 mb-2">
+                  実績・取り組み
+                </h4>
+                <ul className="list-disc list-inside space-y-2 text-gray-700">
+                  <li>Xcode Cloudを導入し、PR単位での自動テスト実行とビルド検証を実現</li>
+                  <li>ウォークスルー画面を全面刷新し、直感的なオンボーディングUIに改善</li>
+                  <li>2026年ミラノ冬季オリンピック向けの特集トップ画面・特集UIを新規実装</li>
+                  <li>動画再生関連コードをTCA（The Composable Architecture）でリプレイスし保守性向上</li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="text-lg font-semibold text-gray-800 mb-2">
+                  利用技術
+                </h4>
+                <p className="text-gray-700">
+                  Swift / SwiftUI / UIKit / Combine / TCA / AVFoundation / AVPlayer / Xcode Cloud
+                </p>
+              </div>
+            </div>
+          </div>
+
           {/* Voicy */}
           <div className="bg-white rounded-xl p-8 shadow-lg">
             <div className="flex justify-between items-start mb-6">
@@ -165,7 +233,7 @@ export const Home = (): JSX.Element => (
                   プロジェクト概要
                 </h4>
                 <p className="text-gray-700">
-                  音声配信プラットフォームを提供する企業で、主に音声配信ユーザー向けのパーソナリティの収録アプリの開発を担当。Agoraを利用した生放送機能の開発や、パーソナリティが収録・音声発信しやすい体験を提供するための様々な改善を行う。
+                  音声配信プラットフォーム「Voicy」にて、iOSエンジニア兼チームリーダーとして3年間従事。パーソナリティ向け収録アプリの開発責任者として、外注主体だった開発体制の内製化からアーキテクチャ刷新、新機能開発までをリードした。
                 </p>
               </div>
               <div>
@@ -173,13 +241,10 @@ export const Home = (): JSX.Element => (
                   実績・取り組み
                 </h4>
                 <ul className="list-disc list-inside space-y-2 text-gray-700">
-                  <li>
-                    外注中心だったアプリ開発の内製化し、テスタブルな設計へ徐々に変更
-                  </li>
-                  <li>
-                    マルチモジュールを導入し、モジュール単位でテスタブルな設計を保証
-                  </li>
-                  <li>生放送やコラボ収録などの新たな収録方法の開発</li>
+                  <li>マルチモジュールアーキテクチャを導入し、新規モジュールでテストカバレッジ80%以上を達成。リリース後の不具合報告が約40%減少</li>
+                  <li>コラボ収録機能を設計・開発。リリース後100名以上のパーソナリティが利用</li>
+                  <li>Agoraを活用したリアルタイム音声配信（生放送）機能をiOS/Android両プラットフォームで実装</li>
+                  <li>エンジニア採用の1次面談を担当し、3名の採用に貢献</li>
                 </ul>
               </div>
               <div>
@@ -187,8 +252,7 @@ export const Home = (): JSX.Element => (
                   利用技術
                 </h4>
                 <p className="text-gray-700">
-                  SwiftUI / Agora / AVFoundation / RxSwift / Jetpack Compose /
-                  ExoPlayer
+                  Swift / Kotlin / Go / SwiftUI / UIKit / RxSwift / Jetpack Compose / AVFoundation / Agora SDK / ExoPlayer / XCTest / GitHub Actions
                 </p>
               </div>
             </div>
@@ -334,7 +398,7 @@ export const Home = (): JSX.Element => (
                 <h3 className="text-xl font-bold text-blue-700">
                   linq社 iOSエンジニア
                 </h3>
-                <p className="text-gray-600">2022/11 - 2023/03</p>
+                <p className="text-gray-600">2023/04 - 2024/04</p>
               </div>
               <a
                 href="https://linq.co.jp/"

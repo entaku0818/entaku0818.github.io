@@ -222,6 +222,28 @@ export const Personal = (): JSX.Element => {
                     <span>Speaker Profile</span>
                   </a>
                 </li>
+                <li className="flex flex-col space-y-3 p-4 rounded-lg hover:bg-gray-50 transition-colors duration-200">
+                  <div className="flex items-center space-x-2">
+                    <span className="text-blue-600">📱</span>
+                    <a
+                      href="https://iosdc.jp/2024/"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-lg font-medium text-blue-600 hover:underline"
+                    >
+                      iOSDC Japan 2024
+                    </a>
+                  </div>
+                  <a
+                    href="https://fortee.jp/iosdc-japan-2024/proposal/8c6f01d9-8fd3-4d5e-afef-f29d561f3c39"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-gray-600 hover:text-blue-600 ml-7 flex items-center space-x-2"
+                  >
+                    <span>👤</span>
+                    <span>Speaker Profile</span>
+                  </a>
+                </li>
               </ul>
             </section>
           </div>
