@@ -1,39 +1,21 @@
 import '@fortawesome/fontawesome-svg-core/styles.css'
 
 export const Header = (): JSX.Element => (
-  <header>
-    <h1 className="text-xl">
-      <a className="header-title" href="/">
+  <header className="fixed top-0 w-full z-50 bg-white border-b border-gray-100">
+    <div className="container mx-auto px-6 py-4 flex items-center">
+      <a
+        href="/"
+        className="text-lg font-black tracking-widest text-gray-900 hover:text-indigo-600 transition-colors"
+      >
         ENTAKU
       </a>
-    </h1>
-    <nav className="pc-nav">
-      <a href="/">home</a>
-      <a className={'ml-4'} href="/personal">
-        personal
-      </a>
-      <a className={'ml-4'} href="/articles">
-        articles
-      </a>
-      <a className={'ml-4'} href="/supports">
-        supports
-      </a>
-    </nav>
-    <style jsx>{`
-      header {
-        padding: 10px 4%;
-        position: fixed;
-        top: 0;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        background: #fff;
-      }
-
-      nav {
-        margin: 0 0 0 auto;
-      }
-    `}</style>
+      <nav className="ml-auto flex gap-8">
+        <a href="/" className="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors">Home</a>
+        <a href="/personal" className="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors">Personal</a>
+        <a href="/articles" className="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors">Articles</a>
+        <a href="/supports" className="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors">Supports</a>
+      </nav>
+    </div>
   </header>
 )
 

@@ -4,8 +4,35 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTwitter, faGithub } from '@fortawesome/free-brands-svg-icons'
 import Header from '../components/header'
 
+const Tag = ({ children }: { children: string }) => (
+  <span className="inline-block px-2 py-1 text-xs font-semibold bg-indigo-50 text-indigo-700 rounded-md mr-1 mb-1">
+    {children}
+  </span>
+)
+
+const Tags = ({ text }: { text: string }) => (
+  <div className="flex flex-wrap mt-2">
+    {text.split(' / ').map((tag) => (
+      <Tag key={tag}>{tag.trim()}</Tag>
+    ))}
+  </div>
+)
+
+const SectionTitle = ({ children }: { children: string }) => (
+  <h2 className="text-3xl font-bold text-gray-900 mb-10 pl-4 border-l-4 border-indigo-500">
+    {children}
+  </h2>
+)
+
+const BulletItem = ({ children }: { children: JSX.Element | string }) => (
+  <li className="flex gap-3 items-start">
+    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-indigo-400 flex-shrink-0" />
+    <span className="text-gray-600 text-sm">{children}</span>
+  </li>
+)
+
 export const Home = (): JSX.Element => (
-  <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
+  <div className="min-h-screen bg-gray-50">
     <Head>
       <title>Portfolio - entaku</title>
       <link rel="icon" href="/favicon.ico" />
@@ -13,458 +40,427 @@ export const Home = (): JSX.Element => (
     <Header />
 
     {/* Hero Section */}
-    <main className="container mx-auto px-4 py-12">
-      <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-12 mb-20">
-        <div className="relative z-10">
-          <h1 className="text-7xl font-extrabold mb-4">entaku</h1>
-          <p className="text-2xl font-light text-blue-100 mb-8">
-            Mobile App Developer
-          </p>
-          <div className="flex gap-6">
-            <a
-              href="https://twitter.com/entaku_0818"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-blue-200 transition-colors"
-            >
-              <FontAwesomeIcon size="2x" icon={faTwitter} />
-            </a>
-            <a
-              href="https://github.com/entaku0818"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-blue-200 transition-colors"
-            >
-              <FontAwesomeIcon size="2x" icon={faGithub} />
-            </a>
-          </div>
-        </div>
-        <div className="absolute right-0 bottom-0 opacity-10">
-          <svg width="400" height="400" viewBox="0 0 200 200">
-            <path
-              fill="currentColor"
-              d="M45,-78.1C58.3,-71.2,69.1,-58.4,77.8,-43.7C86.5,-29,93.2,-12.5,89.8,2.2C86.4,16.8,73,29.6,61.3,41.6C49.7,53.6,39.8,64.8,27.4,69.9C15,75,-0,74,-13.2,69.7C-26.4,65.4,-37.8,57.8,-47.6,48.2C-57.4,38.6,-65.7,27,-70.1,13.7C-74.5,0.4,-75,-14.6,-69.8,-27.3C-64.6,-40,-53.7,-50.4,-41.4,-57.8C-29.1,-65.2,-15.5,-69.6,0.6,-70.6C16.8,-71.6,33.6,-69.2,45,-78.1Z"
-              transform="translate(100 100)"
-            />
-          </svg>
+    <div className="bg-gradient-to-br from-gray-900 via-indigo-900 to-gray-900">
+      <div className="container mx-auto px-6 pt-40 pb-24">
+        <p className="text-indigo-400 text-sm font-semibold tracking-widest uppercase mb-4">
+          Mobile App Developer
+        </p>
+        <h1 className="text-8xl font-black text-white mb-8 leading-none">
+          entaku
+        </h1>
+        <div className="flex gap-5">
+          <a
+            href="https://twitter.com/entaku_0818"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-400 hover:text-white transition-colors"
+          >
+            <FontAwesomeIcon size="lg" icon={faTwitter} />
+          </a>
+          <a
+            href="https://github.com/entaku0818"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-400 hover:text-white transition-colors"
+          >
+            <FontAwesomeIcon size="lg" icon={faGithub} />
+          </a>
         </div>
       </div>
+    </div>
 
-      {/* Overview Section */}
+    <main className="container mx-auto px-6 py-20">
+      {/* Overview */}
       <section className="mb-20">
-        <h2 className="text-4xl font-bold text-gray-800 mb-8">概要</h2>
-        <div className="prose prose-lg max-w-none text-gray-700">
-          <p className="mb-4">
+        <SectionTitle>概要</SectionTitle>
+        <div className="text-gray-600 leading-relaxed space-y-4 max-w-3xl">
+          <p>
             IT専門学校を卒業後、10年以上にわたりソフトウェア開発の幅広い経験を積んできました。SIerではインフラからフロントエンドまでのシステム開発に携わり、その後モバイルアプリ開発に特化。iOS/Android両プラットフォームで複数のアプリをリリースし、特に音声配信やリアルタイム通信を活用したアプリ開発で実績を重ねてきました。
           </p>
-          <p className="mb-4">
+          <p>
             直近では株式会社VoicyでiOSエンジニア兼チームリーダーとして、外注主体だったアプリ開発を内製化。マルチモジュール化を進め、新規モジュールではテストカバレッジ80%以上を達成。また、アジャイル開発を導入してパーソナリティ向け施策の開発を主導し、コラボ収録機能などの新機能開発からアーキテクチャ刷新まで行い、新たに100名のパーソナリティへコラボ収録をしていただくことができました。
           </p>
-          <p className="mb-4">
-            2025年1月より株式会社TVerでiOSのリードエンジニアとして働いています。
-          </p>
+          <p>2025年1月より株式会社TVerでiOSのリードエンジニアとして働いています。</p>
           <p>
-            iOSDC JAPAN
-            2024での登壇やSwift愛好会の運営など、技術コミュニティへの貢献にも力を入れています。
+            iOSDC JAPAN 2024での登壇やSwift愛好会の運営など、技術コミュニティへの貢献にも力を入れています。
           </p>
         </div>
       </section>
 
-      {/* Technical Background Section */}
+      {/* Technical Background */}
       <section className="mb-20">
-        <h2 className="text-4xl font-bold text-gray-800 mb-8">技術略歴</h2>
-        <ul className="list-disc list-inside space-y-4 text-gray-700">
-          <li>
-            SIer時代に培ったインフラ、バックエンド、フロントエンドの幅広い開発経験
-          </li>
-          <li>
-            iOS/Androidのモバイルアプリ開発に精通し、両プラットフォームに対応可能
-          </li>
-          <li>
-            アジャイル開発の導入と運用により、開発プロジェクトの推進とチームの成長に貢献
-          </li>
-          <li>
-            プロジェクトマネジメントの経験を活かし、ステークホルダーとの調整や優先順位付けを円滑に行う能力
-          </li>
+        <SectionTitle>技術略歴</SectionTitle>
+        <ul className="space-y-3 max-w-3xl">
+          {[
+            'SIer時代に培ったインフラ、バックエンド、フロントエンドの幅広い開発経験',
+            'iOS/Androidのモバイルアプリ開発に精通し、両プラットフォームに対応可能',
+            'アジャイル開発の導入と運用により、開発プロジェクトの推進とチームの成長に貢献',
+            'プロジェクトマネジメントの経験を活かし、ステークホルダーとの調整や優先順位付けを円滑に行う能力',
+          ].map((item) => (
+            <BulletItem key={item}>{item}</BulletItem>
+          ))}
         </ul>
       </section>
 
-      {/* Specialties Section */}
+      {/* Specialties */}
       <section className="mb-20">
-        <h2 className="text-4xl font-bold text-gray-800 mb-8">得意なこと</h2>
-        <ul className="list-disc list-inside space-y-4 text-gray-700">
-          <li>モバイルアプリの開発、アーキテクチャ設計</li>
-          <li>音声配信 / ライブ配信の仕組み作り</li>
+        <SectionTitle>得意なこと</SectionTitle>
+        <ul className="space-y-3 max-w-3xl">
+          {[
+            'モバイルアプリの開発、アーキテクチャ設計',
+            '音声配信 / ライブ配信の仕組み作り',
+          ].map((item) => (
+            <BulletItem key={item}>{item}</BulletItem>
+          ))}
         </ul>
       </section>
 
-      {/* Main Outputs Section */}
+      {/* Main Outputs */}
       <section className="mb-20">
-        <h2 className="text-4xl font-bold text-gray-800 mb-8">
-          主なアウトプット
-        </h2>
-        <div className="space-y-6">
-          <div>
-            <h3 className="text-xl font-bold text-blue-700 mb-2">
+        <SectionTitle>主なアウトプット</SectionTitle>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8 hover:shadow-md transition-shadow">
+            <p className="text-xs font-semibold text-indigo-500 uppercase tracking-wider mb-2">
               iOSDC JAPAN 2024
-            </h3>
-            <p className="text-gray-700">
-              「Core Audio」について登壇
-              <a
-                href="https://fortee.jp/iosdc-japan-2024/proposal/8c6f01d9-8fd3-4d5e-afef-f29d561f3c39"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-500 hover:text-blue-700 ml-2"
-              >
-                詳細を見る →
-              </a>
             </p>
+            <p className="text-gray-700 mb-4">「Core Audio」について登壇</p>
+            <a
+              href="https://fortee.jp/iosdc-japan-2024/proposal/8c6f01d9-8fd3-4d5e-afef-f29d561f3c39"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm font-medium text-indigo-600 hover:text-indigo-800 transition-colors"
+            >
+              詳細を見る →
+            </a>
           </div>
-          <div>
-            <h3 className="text-xl font-bold text-blue-700 mb-2">
+          <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8 hover:shadow-md transition-shadow">
+            <p className="text-xs font-semibold text-indigo-500 uppercase tracking-wider mb-2">
               iOSDC JAPAN 2022
-            </h3>
-            <p className="text-gray-700">
-              「音声配信アプリにおけるiOSを使った音声配信の全てと裏側」について登壇
-              <a
-                href="https://fortee.jp/iosdc-japan-2022/proposal/ee2ab807-9053-4779-84f9-ec9951f7cfc0"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-500 hover:text-blue-700 ml-2"
-              >
-                詳細を見る →
-              </a>
             </p>
+            <p className="text-gray-700 mb-4">
+              「音声配信アプリにおけるiOSを使った音声配信の全てと裏側」について登壇
+            </p>
+            <a
+              href="https://fortee.jp/iosdc-japan-2022/proposal/ee2ab807-9053-4779-84f9-ec9951f7cfc0"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm font-medium text-indigo-600 hover:text-indigo-800 transition-colors"
+            >
+              詳細を見る →
+            </a>
           </div>
         </div>
       </section>
 
-      {/* Community Section */}
+      {/* Community */}
       <section className="mb-20">
-        <h2 className="text-4xl font-bold text-gray-800 mb-8">コミュニティ活動</h2>
-        <div className="bg-white rounded-xl p-8 shadow-lg">
-          <div className="flex justify-between items-start mb-4">
-            <h3 className="text-xl font-bold text-blue-700">Swift愛好会</h3>
+        <SectionTitle>コミュニティ活動</SectionTitle>
+        <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8 hover:shadow-md transition-shadow max-w-2xl">
+          <div className="flex justify-between items-start">
+            <h3 className="text-lg font-bold text-gray-900">Swift愛好会</h3>
             <a
               href="https://love-swift.connpass.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-500 hover:text-blue-700"
+              className="text-sm font-medium text-indigo-600 hover:text-indigo-800 transition-colors"
             >
               connpass →
             </a>
           </div>
-          <p className="text-gray-700">
+          <p className="text-gray-600 mt-3 text-sm">
             Swiftエンジニア2,200名以上が参加するコミュニティの運営メンバー。月1〜2回のペースで勉強会を企画・開催（vol.98まで継続中）。
           </p>
         </div>
       </section>
 
-      {/* Work Experience Section */}
+      {/* Work Experience */}
       <section className="mb-20">
-        <h2 className="text-4xl font-bold text-gray-800 mb-8">職歴</h2>
-        <div className="space-y-12">
+        <SectionTitle>職歴</SectionTitle>
+        <div className="space-y-6">
           {/* TVer */}
-          <div className="bg-white rounded-xl p-8 shadow-lg">
+          <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8 hover:shadow-md transition-shadow">
             <div className="flex justify-between items-start mb-6">
               <div>
-                <h3 className="text-2xl font-bold text-blue-700">TVer</h3>
-                <p className="text-gray-600">2025/01 - 現在</p>
+                <h3 className="text-xl font-bold text-gray-900">TVer</h3>
+                <p className="text-sm text-gray-400 mt-1">2025/01 - 現在</p>
               </div>
               <a
                 href="https://tver.jp/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-500 hover:text-blue-700"
+                className="text-sm font-medium text-indigo-600 hover:text-indigo-800 transition-colors"
               >
                 Website →
               </a>
             </div>
-            <div className="space-y-4">
+            <div className="space-y-5">
               <div>
-                <h4 className="text-lg font-semibold text-gray-800 mb-2">
+                <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">
                   プロジェクト概要
                 </h4>
-                <p className="text-gray-700">
+                <p className="text-gray-600 text-sm">
                   日本最大級の民放公式テレビポータル「TVer」にて、iOSリードエンジニアとして参画。動画配信プラットフォームの開発・改善を担当。
                 </p>
               </div>
               <div>
-                <h4 className="text-lg font-semibold text-gray-800 mb-2">
+                <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">
                   実績・取り組み
                 </h4>
-                <ul className="list-disc list-inside space-y-2 text-gray-700">
-                  <li>Xcode Cloudを導入し、PR単位での自動テスト実行とビルド検証を実現</li>
-                  <li>ウォークスルー画面を全面刷新し、直感的なオンボーディングUIに改善</li>
-                  <li>2026年ミラノ冬季オリンピック向けの特集トップ画面・特集UIを新規実装</li>
-                  <li>動画再生関連コードをTCA（The Composable Architecture）でリプレイスし保守性向上</li>
+                <ul className="space-y-2">
+                  {[
+                    'Xcode Cloudを導入し、PR単位での自動テスト実行とビルド検証を実現',
+                    'ウォークスルー画面を全面刷新し、直感的なオンボーディングUIに改善',
+                    '2026年ミラノ冬季オリンピック向けの特集トップ画面・特集UIを新規実装',
+                    '動画再生関連コードをTCA（The Composable Architecture）でリプレイスし保守性向上',
+                  ].map((item) => (
+                    <BulletItem key={item}>{item}</BulletItem>
+                  ))}
                 </ul>
               </div>
               <div>
-                <h4 className="text-lg font-semibold text-gray-800 mb-2">
+                <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">
                   利用技術
                 </h4>
-                <p className="text-gray-700">
-                  Swift / SwiftUI / UIKit / Combine / TCA / AVFoundation / AVPlayer / Xcode Cloud
-                </p>
+                <Tags text="Swift / SwiftUI / UIKit / Combine / TCA / AVFoundation / AVPlayer / Xcode Cloud" />
               </div>
             </div>
           </div>
 
           {/* Voicy */}
-          <div className="bg-white rounded-xl p-8 shadow-lg">
+          <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8 hover:shadow-md transition-shadow">
             <div className="flex justify-between items-start mb-6">
               <div>
-                <h3 className="text-2xl font-bold text-blue-700">Voicy</h3>
-                <p className="text-gray-600">2021/12 - 2024/12</p>
+                <h3 className="text-xl font-bold text-gray-900">Voicy</h3>
+                <p className="text-sm text-gray-400 mt-1">2021/12 - 2024/12</p>
               </div>
               <a
                 href="https://voicy.jp/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-500 hover:text-blue-700"
+                className="text-sm font-medium text-indigo-600 hover:text-indigo-800 transition-colors"
               >
                 Website →
               </a>
             </div>
-            <div className="space-y-4">
+            <div className="space-y-5">
               <div>
-                <h4 className="text-lg font-semibold text-gray-800 mb-2">
+                <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">
                   プロジェクト概要
                 </h4>
-                <p className="text-gray-700">
+                <p className="text-gray-600 text-sm">
                   音声配信プラットフォーム「Voicy」にて、iOSエンジニア兼チームリーダーとして3年間従事。パーソナリティ向け収録アプリの開発責任者として、外注主体だった開発体制の内製化からアーキテクチャ刷新、新機能開発までをリードした。
                 </p>
               </div>
               <div>
-                <h4 className="text-lg font-semibold text-gray-800 mb-2">
+                <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">
                   実績・取り組み
                 </h4>
-                <ul className="list-disc list-inside space-y-2 text-gray-700">
-                  <li>マルチモジュールアーキテクチャを導入し、新規モジュールでテストカバレッジ80%以上を達成。リリース後の不具合報告が約40%減少</li>
-                  <li>コラボ収録機能を設計・開発。リリース後100名以上のパーソナリティが利用</li>
-                  <li>Agoraを活用したリアルタイム音声配信（生放送）機能をiOS/Android両プラットフォームで実装</li>
-                  <li>エンジニア採用の1次面談を担当し、3名の採用に貢献</li>
+                <ul className="space-y-2">
+                  {[
+                    'マルチモジュールアーキテクチャを導入し、新規モジュールでテストカバレッジ80%以上を達成。リリース後の不具合報告が約40%減少',
+                    'コラボ収録機能を設計・開発。リリース後100名以上のパーソナリティが利用',
+                    'Agoraを活用したリアルタイム音声配信（生放送）機能をiOS/Android両プラットフォームで実装',
+                    'エンジニア採用の1次面談を担当し、3名の採用に貢献',
+                  ].map((item) => (
+                    <BulletItem key={item}>{item}</BulletItem>
+                  ))}
                 </ul>
               </div>
               <div>
-                <h4 className="text-lg font-semibold text-gray-800 mb-2">
+                <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">
                   利用技術
                 </h4>
-                <p className="text-gray-700">
-                  Swift / Kotlin / Go / SwiftUI / UIKit / RxSwift / Jetpack Compose / AVFoundation / Agora SDK / ExoPlayer / XCTest / GitHub Actions
-                </p>
+                <Tags text="Swift / Kotlin / Go / SwiftUI / UIKit / RxSwift / Jetpack Compose / AVFoundation / Agora SDK / ExoPlayer / XCTest / GitHub Actions" />
               </div>
             </div>
           </div>
 
           {/* CBCloud */}
-          <div className="bg-white rounded-xl p-8 shadow-lg">
+          <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8 hover:shadow-md transition-shadow">
             <div className="flex justify-between items-start mb-6">
               <div>
-                <h3 className="text-2xl font-bold text-blue-700">CBCloud</h3>
-                <p className="text-gray-600">2019/04 - 2021/11</p>
+                <h3 className="text-xl font-bold text-gray-900">CBCloud</h3>
+                <p className="text-sm text-gray-400 mt-1">2019/04 - 2021/11</p>
               </div>
               <a
                 href="https://cb-cloud.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-500 hover:text-blue-700"
+                className="text-sm font-medium text-indigo-600 hover:text-indigo-800 transition-colors"
               >
                 Website →
               </a>
             </div>
-            <div className="space-y-4">
+            <div className="space-y-5">
               <div>
-                <h4 className="text-lg font-semibold text-gray-800 mb-2">
+                <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">
                   プロジェクト
                 </h4>
-                <ul className="list-disc list-inside space-y-2 text-gray-700">
-                  <li>
+                <ul className="space-y-2">
+                  <BulletItem>
                     <a
                       href="https://smaryu.town/truck/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-blue-500 hover:text-blue-700"
+                      className="text-indigo-600 hover:text-indigo-800"
                     >
                       SmaRyuTruck
-                    </a>
+                    </a>{' '}
                     の新規開発
-                  </li>
-                  <li>
+                  </BulletItem>
+                  <BulletItem>
                     <a
                       href="https://pickgo.town/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-blue-500 hover:text-blue-700"
+                      className="text-indigo-600 hover:text-indigo-800"
                     >
                       PickGo
-                    </a>
+                    </a>{' '}
                     の開発・運用
-                  </li>
-                  <li>
+                  </BulletItem>
+                  <BulletItem>
                     <a
                       href="https://press.jal.co.jp/ja/release/202103/005969.html"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-blue-500 hover:text-blue-700"
+                      className="text-indigo-600 hover:text-indigo-800"
                     >
                       JAL航空便連携
                     </a>
-                  </li>
+                  </BulletItem>
                 </ul>
               </div>
               <div>
-                <h4 className="text-lg font-semibold text-gray-800 mb-2">
+                <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">
                   利用技術
                 </h4>
-                <p className="text-gray-700">Swift / Kotlin / Nuxt.js</p>
+                <Tags text="Swift / Kotlin / Nuxt.js" />
               </div>
             </div>
           </div>
 
-          {/* LifeSports */}
-          <div className="bg-white rounded-xl p-8 shadow-lg">
+          {/* Lifesports */}
+          <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8 hover:shadow-md transition-shadow">
             <div className="flex justify-between items-start mb-6">
               <div>
-                <h3 className="text-2xl font-bold text-blue-700">Lifesports</h3>
-                <p className="text-gray-600">2018/02 - 2019/03</p>
+                <h3 className="text-xl font-bold text-gray-900">Lifesports</h3>
+                <p className="text-sm text-gray-400 mt-1">2018/02 - 2019/03</p>
               </div>
               <a
                 href="https://lifesports.jp"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-500 hover:text-blue-700"
+                className="text-sm font-medium text-indigo-600 hover:text-indigo-800 transition-colors"
               >
                 Website →
               </a>
             </div>
             <div className="space-y-4">
-              <p className="text-gray-700">
+              <p className="text-gray-600 text-sm">
                 スポーツ事業に関わる企業で、エンジニアとしてユーザー数を増やすための既存機能の修正やコミュニティ機能の設計・実装を行い、ユーザーの利用体験を向上させた。
               </p>
               <div>
-                <h4 className="text-lg font-semibold text-gray-800 mb-2">
+                <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">
                   利用技術
                 </h4>
-                <p className="text-gray-700">Swift / Kotlin / Laravel</p>
+                <Tags text="Swift / Kotlin / Laravel" />
               </div>
             </div>
           </div>
 
           {/* AP Communications */}
-          <div className="bg-white rounded-xl p-8 shadow-lg">
+          <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8 hover:shadow-md transition-shadow">
             <div className="flex justify-between items-start mb-6">
               <div>
-                <h3 className="text-2xl font-bold text-blue-700">
-                  エーピーコミュニケーションズ
-                </h3>
-                <p className="text-gray-600">2013/09 - 2018/02</p>
+                <h3 className="text-xl font-bold text-gray-900">エーピーコミュニケーションズ</h3>
+                <p className="text-sm text-gray-400 mt-1">2013/09 - 2018/02</p>
               </div>
               <a
                 href="https://www.ap-com.co.jp"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-500 hover:text-blue-700"
+                className="text-sm font-medium text-indigo-600 hover:text-indigo-800 transition-colors"
               >
                 Website →
               </a>
             </div>
             <div className="space-y-4">
-              <p className="text-gray-700">
+              <p className="text-gray-600 text-sm">
                 ネットワーク系SIerで、ネットワークエンジニアとして国内大手ネットワーク認証システムの運用やシステムリプレイスを担当。開発部門に異動後は、教育事業会社や娯楽事業のサービス保守システムリプレイスなど、様々なプロジェクトに携わった。
               </p>
               <div>
-                <h4 className="text-lg font-semibold text-gray-800 mb-2">
+                <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">
                   利用技術
                 </h4>
-                <p className="text-gray-700">
-                  Java (Spring) / PHP (Laravel) / MySQL
-                </p>
+                <Tags text="Java (Spring) / PHP (Laravel) / MySQL" />
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Side Projects Section */}
+      {/* Side Projects */}
       <section className="mb-20">
-        <h2 className="text-4xl font-bold text-gray-800 mb-8">Side Projects</h2>
-        <div className="space-y-8">
-          {/* linq */}
-          <div className="bg-white rounded-xl p-8 shadow-lg">
+        <SectionTitle>Side Projects</SectionTitle>
+        <div className="space-y-6">
+          <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8 hover:shadow-md transition-shadow">
             <div className="flex justify-between items-start mb-4">
               <div>
-                <h3 className="text-xl font-bold text-blue-700">
-                  linq社 iOSエンジニア
-                </h3>
-                <p className="text-gray-600">2023/04 - 2024/04</p>
+                <h3 className="text-lg font-bold text-gray-900">linq社 iOSエンジニア</h3>
+                <p className="text-sm text-gray-400 mt-1">2023/04 - 2024/04</p>
               </div>
               <a
                 href="https://linq.co.jp/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-500 hover:text-blue-700"
+                className="text-sm font-medium text-indigo-600 hover:text-indigo-800 transition-colors"
               >
                 Website →
               </a>
             </div>
-            <p className="text-gray-700 mb-4">
-              位置情報共有アプリwhooのSwiftUI化や利用ユーザー増加のためのMap上でスタンプを送る機能ややフレンドメッセージ機能を開発しました。
-              また、マップ上のユーザーインタラクティブなアニメーションなどを対応しました。
+            <p className="text-gray-600 text-sm mb-4">
+              位置情報共有アプリwhooのSwiftUI化や利用ユーザー増加のためのMap上でスタンプを送る機能ややフレンドメッセージ機能を開発しました。また、マップ上のユーザーインタラクティブなアニメーションなどを対応しました。
             </p>
-            <div>
-              <h4 className="text-lg font-semibold text-gray-800 mb-2">
-                利用技術
-              </h4>
-              <p className="text-gray-700">
-                SwiftUI / UIKit / MapKit / CoreLocation / Core Animation
-              </p>
-            </div>
+            <Tags text="SwiftUI / UIKit / MapKit / CoreLocation / Core Animation" />
           </div>
 
-          {/* Healthcare App */}
-          <div className="bg-white rounded-xl p-8 shadow-lg">
+          <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8 hover:shadow-md transition-shadow">
             <div className="flex justify-between items-start mb-4">
               <div>
-                <h3 className="text-xl font-bold text-blue-700">
-                  ヘルスケアアプリ モバイルエンジニア
-                </h3>
-                <p className="text-gray-600">2022/11 - 2023/03</p>
+                <h3 className="text-lg font-bold text-gray-900">ヘルスケアアプリ モバイルエンジニア</h3>
+                <p className="text-sm text-gray-400 mt-1">2022/11 - 2023/03</p>
               </div>
               <a
                 href="https://soxai.co.jp/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-500 hover:text-blue-700"
+                className="text-sm font-medium text-indigo-600 hover:text-indigo-800 transition-colors"
               >
                 Website →
               </a>
             </div>
-            <p className="text-gray-700 mb-4">
+            <p className="text-gray-600 text-sm">
               quasarというマルチプラットフォーム開発技術で開発した。主に新アプリの画面リプレイスでヘルス画面というグラフを書く画面などを担当した。
             </p>
           </div>
 
-          {/* nossa360 */}
-          <div className="bg-white rounded-xl p-8 shadow-lg">
+          <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8 hover:shadow-md transition-shadow">
             <div className="flex justify-between items-start mb-4">
               <div>
-                <h3 className="text-xl font-bold text-blue-700">
-                  nossa360 Androidエンジニア
-                </h3>
-                <p className="text-gray-600">2020/04 - 2021/03</p>
+                <h3 className="text-lg font-bold text-gray-900">nossa360 Androidエンジニア</h3>
+                <p className="text-sm text-gray-400 mt-1">2020/04 - 2021/03</p>
               </div>
               <a
                 href="https://lp.nossa360biz.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-500 hover:text-blue-700"
+                className="text-sm font-medium text-indigo-600 hover:text-indigo-800 transition-colors"
               >
                 Website →
               </a>
             </div>
-            <p className="text-gray-700">
+            <p className="text-gray-600 text-sm">
               nossa360という建築会社向けのカメラアプリを開発保守。主にAndroidのCameraAPI開発した。
             </p>
           </div>
@@ -472,10 +468,11 @@ export const Home = (): JSX.Element => (
       </section>
     </main>
 
-    <footer className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-8 text-center">
-      <p className="text-lg">
-        Crafted with ❤️ by <span className="font-bold">entaku</span>
-      </p>
+    <footer className="bg-gray-900 text-white py-12">
+      <div className="container mx-auto px-6 text-center">
+        <p className="text-lg font-black tracking-widest mb-2">ENTAKU</p>
+        <p className="text-gray-400 text-sm">Mobile App Developer</p>
+      </div>
     </footer>
   </div>
 )
