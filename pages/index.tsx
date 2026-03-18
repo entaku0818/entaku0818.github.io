@@ -80,9 +80,12 @@ export const Home = (): JSX.Element => (
           <p>
             直近では株式会社VoicyでiOSエンジニア兼チームリーダーとして、外注主体だったアプリ開発を内製化。マルチモジュール化を進め、新規モジュールではテストカバレッジ80%以上を達成。また、アジャイル開発を導入してパーソナリティ向け施策の開発を主導し、コラボ収録機能などの新機能開発からアーキテクチャ刷新まで行い、新たに100名のパーソナリティへコラボ収録をしていただくことができました。
           </p>
-          <p>2025年1月より株式会社TVerでiOSのリードエンジニアとして働いています。</p>
           <p>
-            iOSDC JAPAN 2024での登壇やSwift愛好会の運営など、技術コミュニティへの貢献にも力を入れています。
+            2025年1月より株式会社TVerでiOSのリードエンジニアとして働いています。
+          </p>
+          <p>
+            iOSDC JAPAN
+            2024での登壇やSwift愛好会の運営など、技術コミュニティへの貢献にも力を入れています。
           </p>
         </div>
       </section>
@@ -298,26 +301,30 @@ export const Home = (): JSX.Element => (
                 </h4>
                 <ul className="space-y-2">
                   <BulletItem>
-                    <a
-                      href="https://smaryu.town/truck/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-indigo-600 hover:text-indigo-800"
-                    >
-                      SmaRyuTruck
-                    </a>{' '}
-                    の新規開発
+                    <span>
+                      <a
+                        href="https://smaryu.town/truck/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-indigo-600 hover:text-indigo-800"
+                      >
+                        SmaRyuTruck
+                      </a>{' '}
+                      の新規開発
+                    </span>
                   </BulletItem>
                   <BulletItem>
-                    <a
-                      href="https://pickgo.town/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-indigo-600 hover:text-indigo-800"
-                    >
-                      PickGo
-                    </a>{' '}
-                    の開発・運用
+                    <span>
+                      <a
+                        href="https://pickgo.town/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-indigo-600 hover:text-indigo-800"
+                      >
+                        PickGo
+                      </a>{' '}
+                      の開発・運用
+                    </span>
                   </BulletItem>
                   <BulletItem>
                     <a
@@ -373,7 +380,9 @@ export const Home = (): JSX.Element => (
           <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8 hover:shadow-md transition-shadow">
             <div className="flex justify-between items-start mb-6">
               <div>
-                <h3 className="text-xl font-bold text-gray-900">エーピーコミュニケーションズ</h3>
+                <h3 className="text-xl font-bold text-gray-900">
+                  エーピーコミュニケーションズ
+                </h3>
                 <p className="text-sm text-gray-400 mt-1">2013/09 - 2018/02</p>
               </div>
               <a
@@ -407,7 +416,9 @@ export const Home = (): JSX.Element => (
           <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8 hover:shadow-md transition-shadow">
             <div className="flex justify-between items-start mb-4">
               <div>
-                <h3 className="text-lg font-bold text-gray-900">linq社 iOSエンジニア</h3>
+                <h3 className="text-lg font-bold text-gray-900">
+                  linq社 iOSエンジニア
+                </h3>
                 <p className="text-sm text-gray-400 mt-1">2023/04 - 2024/04</p>
               </div>
               <a
@@ -428,7 +439,9 @@ export const Home = (): JSX.Element => (
           <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8 hover:shadow-md transition-shadow">
             <div className="flex justify-between items-start mb-4">
               <div>
-                <h3 className="text-lg font-bold text-gray-900">ヘルスケアアプリ モバイルエンジニア</h3>
+                <h3 className="text-lg font-bold text-gray-900">
+                  ヘルスケアアプリ モバイルエンジニア
+                </h3>
                 <p className="text-sm text-gray-400 mt-1">2022/11 - 2023/03</p>
               </div>
               <a
@@ -448,7 +461,9 @@ export const Home = (): JSX.Element => (
           <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8 hover:shadow-md transition-shadow">
             <div className="flex justify-between items-start mb-4">
               <div>
-                <h3 className="text-lg font-bold text-gray-900">nossa360 Androidエンジニア</h3>
+                <h3 className="text-lg font-bold text-gray-900">
+                  nossa360 Androidエンジニア
+                </h3>
                 <p className="text-sm text-gray-400 mt-1">2020/04 - 2021/03</p>
               </div>
               <a
