@@ -158,21 +158,39 @@ export const Home = (): JSX.Element => (
       {/* Community */}
       <section className="mb-20">
         <SectionTitle>コミュニティ活動</SectionTitle>
-        <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8 hover:shadow-md transition-shadow max-w-2xl">
-          <div className="flex justify-between items-start">
-            <h3 className="text-lg font-bold text-gray-900">Swift愛好会</h3>
-            <a
-              href="https://love-swift.connpass.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm font-medium text-indigo-600 hover:text-indigo-800 transition-colors"
-            >
-              connpass →
-            </a>
+        <div className="space-y-6 max-w-2xl">
+          <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8 hover:shadow-md transition-shadow">
+            <div className="flex justify-between items-start">
+              <h3 className="text-lg font-bold text-gray-900">Swift愛好会</h3>
+              <a
+                href="https://love-swift.connpass.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-medium text-indigo-600 hover:text-indigo-800 transition-colors"
+              >
+                connpass →
+              </a>
+            </div>
+            <p className="text-gray-600 mt-3 text-sm">
+              Swiftエンジニア2,200名以上が参加するコミュニティの運営メンバー。月1〜2回のペースで勉強会を企画・開催（vol.98まで継続中）。
+            </p>
           </div>
-          <p className="text-gray-600 mt-3 text-sm">
-            Swiftエンジニア2,200名以上が参加するコミュニティの運営メンバー。月1〜2回のペースで勉強会を企画・開催（vol.98まで継続中）。
-          </p>
+          <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8 hover:shadow-md transition-shadow">
+            <div className="flex justify-between items-start">
+              <h3 className="text-lg font-bold text-gray-900">DroidKaigi</h3>
+              <a
+                href="https://droidkaigi.jp/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-medium text-indigo-600 hover:text-indigo-800 transition-colors"
+              >
+                Website →
+              </a>
+            </div>
+            <p className="text-gray-600 mt-3 text-sm">
+              Android開発者向けカンファレンス「DroidKaigi」のスタッフとして運営に参加。
+            </p>
+          </div>
         </div>
       </section>
 
