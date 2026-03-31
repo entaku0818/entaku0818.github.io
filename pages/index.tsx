@@ -73,7 +73,7 @@ export const Home = (): JSX.Element => (
       {/* Overview */}
       <section className="mb-20">
         <SectionTitle>概要</SectionTitle>
-        <div className="text-gray-600 leading-relaxed space-y-4 max-w-3xl">
+        <div className="text-gray-600 leading-relaxed space-y-4">
           <p>
             IT専門学校を卒業後、10年以上にわたりソフトウェア開発の幅広い経験を積んできました。SIerではインフラからフロントエンドまでのシステム開発に携わり、その後モバイルアプリ開発に特化。iOS/Android両プラットフォームで複数のアプリをリリースし、特に音声配信やリアルタイム通信を活用したアプリ開発で実績を重ねてきました。
           </p>
