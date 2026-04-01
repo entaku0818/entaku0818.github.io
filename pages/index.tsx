@@ -430,6 +430,48 @@ export const Home = (): JSX.Element => (
       <section className="mb-20">
         <SectionTitle>Side Projects</SectionTitle>
         <div className="space-y-6">
+          {/* ishin */}
+          <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8 hover:shadow-md transition-shadow">
+            <div className="flex justify-between items-start mb-4">
+              <div>
+                <h3 className="text-lg font-bold text-gray-900">
+                  ishin モバイルエンジニア
+                </h3>
+                <p className="text-sm text-gray-400 mt-1">2025/07 - 2026/03</p>
+              </div>
+            </div>
+            <p className="text-gray-600 text-sm mb-4">
+              AIアバターが参加できる音声トークルームサービス「ishin」の開発に参加。モバイルアプリ・バックエンドAPI・Web
+              の3領域にまたがって機能開発を担当した。
+            </p>
+            <div className="space-y-4">
+              <div>
+                <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">
+                  実績・取り組み
+                </h4>
+                <ul className="space-y-2">
+                  {[
+                    'React Native（Expo SDK 52）でトークルーム参加UI・波紋アニメーション・AIアバター選択機能などを実装',
+                    'AIアバターのバッジ表示・自動応答トリガー・メッセージ表示キューシステムを設計・開発',
+                    'キニナル（フォロー）機能・ブロック機能をモバイルとAPIの両側で実装',
+                    'Firebase Analytics / BigQuery連携によるトークルーム参加・作成イベントのトラッキング基盤を構築',
+                    'App Tracking Transparency（ATT）対応・GIF圧縮・EASビルドサイズ最適化などApp Store申請対応を担当',
+                    'ishin-web（Next.js）でOGP画像生成を最適化。フォントキャッシュとメモリキャッシュの導入により初回11秒から1.75秒へ6.6倍高速化を達成',
+                    'GoバックエンドAPIでハートビートAPI・BigQuery同期・AIアバター管理などのエンドポイントを開発',
+                  ].map((item) => (
+                    <BulletItem key={item}>{item}</BulletItem>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">
+                  利用技術
+                </h4>
+                <Tags text="React Native / Expo / TypeScript / Go / Next.js / Firebase / BigQuery / Auth0 / EAS" />
+              </div>
+            </div>
+          </div>
+
           <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8 hover:shadow-md transition-shadow">
             <div className="flex justify-between items-start mb-4">
               <div>
