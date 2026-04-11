@@ -10,10 +10,30 @@ export const Header = (): JSX.Element => (
         ENTAKU
       </a>
       <nav className="ml-auto flex gap-8">
-        <a href="/" className="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors">Home</a>
-        <a href="/personal" className="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors">Personal</a>
-        <a href="/articles" className="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors">Articles</a>
-        <a href="/supports" className="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors">Supports</a>
+        <a
+          href="/"
+          className="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors"
+        >
+          Home
+        </a>
+        <a
+          href="/personal"
+          className="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors"
+        >
+          Personal
+        </a>
+        <a
+          href="/articles"
+          className="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors"
+        >
+          Articles
+        </a>
+        <a
+          href="/supports"
+          className="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors"
+        >
+          Supports
+        </a>
       </nav>
     </div>
   </header>

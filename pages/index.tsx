@@ -34,8 +34,31 @@ const BulletItem = ({ children }: { children: JSX.Element | string }) => (
 export const Home = (): JSX.Element => (
   <div className="min-h-screen bg-gray-50">
     <Head>
-      <title>Portfolio - entaku</title>
+      <title>entaku - Mobile App Developer</title>
+      <meta
+        name="description"
+        content="iOSリードエンジニア。Swift / Kotlin / Go を使ったモバイルアプリ開発が得意。TVer・Voicy 等でリードエンジニアとして活躍。"
+      />
       <link rel="icon" href="/favicon.ico" />
+      {/* OGP */}
+      <meta property="og:title" content="entaku - Mobile App Developer" />
+      <meta
+        property="og:description"
+        content="iOSリードエンジニア。Swift / Kotlin / Go を使ったモバイルアプリ開発が得意。TVer・Voicy 等でリードエンジニアとして活躍。"
+      />
+      <meta property="og:image" content="https://entaku.dev/api/og" />
+      <meta property="og:url" content="https://entaku.dev" />
+      <meta property="og:type" content="website" />
+      <meta property="og:site_name" content="entaku" />
+      {/* Twitter Card */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content="@entaku_0818" />
+      <meta name="twitter:title" content="entaku - Mobile App Developer" />
+      <meta
+        name="twitter:description"
+        content="iOSリードエンジニア。Swift / Kotlin / Go を使ったモバイルアプリ開発が得意。TVer・Voicy 等でリードエンジニアとして活躍。"
+      />
+      <meta name="twitter:image" content="https://entaku.dev/api/og" />
     </Head>
     <Header />
 
