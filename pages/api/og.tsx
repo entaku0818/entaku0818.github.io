@@ -23,40 +23,56 @@ export default function handler(_req: NextRequest) {
         <div
           style={{
             display: 'flex',
-            flexDirection: 'column',
-            gap: '16px',
+            flexDirection: 'row',
+            alignItems: 'center',
+            gap: '60px',
           }}
         >
+          <img
+            src="https://pbs.twimg.com/profile_images/1598892937131458560/sgidJlol_400x400.jpg"
+            width={180}
+            height={180}
+            style={{ borderRadius: '50%', border: '4px solid #6366f1' }}
+            alt="entaku"
+          />
           <div
             style={{
-              fontSize: '20px',
-              fontWeight: 600,
-              color: '#818cf8',
-              letterSpacing: '0.2em',
-              textTransform: 'uppercase',
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '16px',
             }}
           >
-            Mobile App Developer
-          </div>
-          <div
-            style={{
-              fontSize: '120px',
-              fontWeight: 900,
-              color: '#ffffff',
-              lineHeight: 1,
-              letterSpacing: '-0.02em',
-            }}
-          >
-            entaku
-          </div>
-          <div
-            style={{
-              fontSize: '24px',
-              color: '#94a3b8',
-              marginTop: '8px',
-            }}
-          >
-            iOS / Android / Swift / Kotlin
+            <div
+              style={{
+                fontSize: '20px',
+                fontWeight: 600,
+                color: '#818cf8',
+                letterSpacing: '0.2em',
+                textTransform: 'uppercase',
+              }}
+            >
+              Mobile App Developer
+            </div>
+            <div
+              style={{
+                fontSize: '100px',
+                fontWeight: 900,
+                color: '#ffffff',
+                lineHeight: 1,
+                letterSpacing: '-0.02em',
+              }}
+            >
+              entaku
+            </div>
+            <div
+              style={{
+                fontSize: '24px',
+                color: '#94a3b8',
+                marginTop: '8px',
+              }}
+            >
+              iOS / Android / Swift / Kotlin
+            </div>
           </div>
         </div>
         <div
