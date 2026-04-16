@@ -147,6 +147,22 @@ export const Home = (): JSX.Element => (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8 hover:shadow-md transition-shadow">
             <p className="text-xs font-semibold text-indigo-500 uppercase tracking-wider mb-2">
+              iOSDC JAPAN 2020
+            </p>
+            <p className="text-gray-700 mb-4">
+              「DroidKaigiの公式アプリで始めるiOSアプリのOSSコミッターへの道」について登壇
+            </p>
+            <a
+              href="https://fortee.jp/iosdc-japan-2020/proposal/c3c70224-08cf-48d7-b5e5-a3d4589737fa"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm font-medium text-indigo-600 hover:text-indigo-800 transition-colors"
+            >
+              詳細を見る →
+            </a>
+          </div>
+          <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8 hover:shadow-md transition-shadow">
+            <p className="text-xs font-semibold text-indigo-500 uppercase tracking-wider mb-2">
               iOSDC JAPAN 2024
             </p>
             <p className="text-gray-700 mb-4">「Core Audio」について登壇</p>
