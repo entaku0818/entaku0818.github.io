@@ -143,53 +143,103 @@ export const Home = (): JSX.Element => (
 
       {/* Main Outputs */}
       <section className="mb-20">
-        <SectionTitle>主なアウトプット</SectionTitle>
+        <SectionTitle>登壇歴</SectionTitle>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8 hover:shadow-md transition-shadow">
             <p className="text-xs font-semibold text-indigo-500 uppercase tracking-wider mb-2">
               iOSDC JAPAN 2020
             </p>
             <p className="text-gray-700 mb-4">
-              「DroidKaigiの公式アプリで始めるiOSアプリのOSSコミッターへの道」について登壇
+              「DroidKaigiの公式アプリで始めるiOSアプリのOSSコミッターへの道」
             </p>
-            <a
-              href="https://fortee.jp/iosdc-japan-2020/proposal/c3c70224-08cf-48d7-b5e5-a3d4589737fa"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm font-medium text-indigo-600 hover:text-indigo-800 transition-colors"
-            >
-              詳細を見る →
-            </a>
+            <div className="flex gap-4">
+              <a
+                href="https://fortee.jp/iosdc-japan-2020/proposal/c3c70224-08cf-48d7-b5e5-a3d4589737fa"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-medium text-indigo-600 hover:text-indigo-800 transition-colors"
+              >
+                詳細 →
+              </a>
+              <a
+                href="https://speakerdeck.com/entaku/droidkaigifalsegong-shi-ahuriteshi-meru-iosahuriosskomitutahefalsedao"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-medium text-gray-500 hover:text-gray-700 transition-colors"
+              >
+                Speaker Deck →
+              </a>
+            </div>
           </div>
           <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8 hover:shadow-md transition-shadow">
             <p className="text-xs font-semibold text-indigo-500 uppercase tracking-wider mb-2">
-              iOSDC JAPAN 2024
+              Vue.js アーキテクチャリング勉強会
             </p>
-            <p className="text-gray-700 mb-4">「Core Audio」について登壇</p>
-            <a
-              href="https://fortee.jp/iosdc-japan-2024/proposal/8c6f01d9-8fd3-4d5e-afef-f29d561f3c39"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm font-medium text-indigo-600 hover:text-indigo-800 transition-colors"
-            >
-              詳細を見る →
-            </a>
+            <p className="text-gray-700 mb-4">
+              「Vue / Vuex のアーキテクチャを完全に理解した」
+            </p>
+            <div className="flex gap-4">
+              <a
+                href="https://cw-engineers.connpass.com/event/146975/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-medium text-indigo-600 hover:text-indigo-800 transition-colors"
+              >
+                詳細 →
+              </a>
+              <a
+                href="https://speakerdeck.com/entaku/vue-vuex-falseakitekutiyawan-quan-nili-jie-sita"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-medium text-gray-500 hover:text-gray-700 transition-colors"
+              >
+                Speaker Deck →
+              </a>
+            </div>
+          </div>
+          <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8 hover:shadow-md transition-shadow">
+            <p className="text-xs font-semibold text-indigo-500 uppercase tracking-wider mb-2">
+              iOSDC JAPAN 2021
+            </p>
+            <p className="text-gray-700 mb-4">
+              「既存のネイティブアプリをFlutterへリプレイスする方法」
+            </p>
+            <div className="flex gap-4">
+              <a
+                href="https://iosdc.jp/2021/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-medium text-indigo-600 hover:text-indigo-800 transition-colors"
+              >
+                詳細 →
+              </a>
+              <a
+                href="https://speakerdeck.com/entaku/pickgo-for-partnerfalseyi-xing-fang-fa-karaxue-hu-ji-cun-falseneiteihuahuriwoflutterherihureisusurufang-fa"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-medium text-gray-500 hover:text-gray-700 transition-colors"
+              >
+                Speaker Deck →
+              </a>
+            </div>
           </div>
           <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8 hover:shadow-md transition-shadow">
             <p className="text-xs font-semibold text-indigo-500 uppercase tracking-wider mb-2">
               iOSDC JAPAN 2022
             </p>
             <p className="text-gray-700 mb-4">
-              「音声配信アプリにおけるiOSを使った音声配信の全てと裏側」について登壇
+              「音声配信アプリにおけるiOSを使った音声配信の全てと裏側」
             </p>
-            <a
-              href="https://fortee.jp/iosdc-japan-2022/proposal/ee2ab807-9053-4779-84f9-ec9951f7cfc0"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm font-medium text-indigo-600 hover:text-indigo-800 transition-colors"
-            >
-              詳細を見る →
-            </a>
+            <div className="flex gap-4">
+              <a
+                href="https://fortee.jp/iosdc-japan-2022/proposal/ee2ab807-9053-4779-84f9-ec9951f7cfc0"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-medium text-indigo-600 hover:text-indigo-800 transition-colors"
+              >
+                詳細 →
+              </a>
+            </div>
           </div>
         </div>
       </section>

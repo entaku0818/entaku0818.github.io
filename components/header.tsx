@@ -28,12 +28,6 @@ export const Header = (): JSX.Element => (
         >
           Articles
         </a>
-        <a
-          href="/supports"
-          className="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors"
-        >
-          Supports
-        </a>
       </nav>
     </div>
   </header>

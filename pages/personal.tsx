@@ -27,232 +27,99 @@ export const Personal = (): JSX.Element => {
   }, [])
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+    <div className="min-h-screen bg-gray-50">
       <Head>
-        <title>Portfolio - entaku</title>
+        <title>Personal - entaku</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <main className="container mx-auto px-4 py-16 max-w-4xl">
+
+      <div className="bg-gradient-to-br from-gray-900 via-indigo-900 to-gray-900">
+        <div className="container mx-auto px-6 pt-40 pb-24">
+          <p className="text-indigo-400 text-sm font-semibold tracking-widest uppercase mb-4">
+            About Me
+          </p>
+          <h1 className="text-6xl font-black text-white leading-none">
+            Personal
+          </h1>
+        </div>
+      </div>
+
+      <main className="container mx-auto px-6 py-20 max-w-3xl">
         {loading ? (
-          <div className="flex justify-center items-center min-h-[60vh]">
-            <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
+          <div className="flex justify-center items-center min-h-[40vh]">
+            <div className="w-8 h-8 border-2 border-indigo-500 border-t-transparent rounded-full animate-spin" />
           </div>
         ) : (
-          <div className="space-y-16">
-            <article className="bg-white rounded-2xl shadow-lg p-8">
-              <div className="markdown-content">
-                <ReactMarkdown
-                  components={{
-                    h1: ({ _node, ...props }: any) => (
-                      <h1
-                        className="text-3xl font-bold mb-6 text-gray-900"
-                        {...props}
-                      />
-                    ),
-                    h2: ({ _node, ...props }: any) => (
-                      <h2
-                        className="text-2xl font-bold mb-4 text-gray-800"
-                        {...props}
-                      />
-                    ),
-                    h3: ({ _node, ...props }: any) => (
-                      <h3
-                        className="text-xl font-bold mb-3 text-gray-800"
-                        {...props}
-                      />
-                    ),
-                    p: ({ _node, ...props }: any) => (
-                      <p
-                        className="mb-4 text-gray-700 leading-relaxed"
-                        {...props}
-                      />
-                    ),
-                    ul: ({ _node, ...props }: any) => (
-                      <ul
-                        className="list-disc list-inside mb-4 text-gray-700"
-                        {...props}
-                      />
-                    ),
-                    ol: ({ _node, ...props }: any) => (
-                      <ol
-                        className="list-decimal list-inside mb-4 text-gray-700"
-                        {...props}
-                      />
-                    ),
-                    li: ({ _node, ...props }: any) => (
-                      <li className="mb-2 text-gray-700" {...props} />
-                    ),
-                    blockquote: ({ _node, ...props }: any) => (
-                      <blockquote
-                        className="border-l-4 border-gray-300 pl-4 italic my-4 text-gray-600"
-                        {...props}
-                      />
-                    ),
-                    a: ({ _node, ...props }: any) => (
-                      <a
-                        className="text-blue-600 hover:text-blue-800 underline"
-                        {...props}
-                      />
-                    ),
-                    code: ({ _node, inline, ...props }: any) =>
-                      inline ? (
-                        <code
-                          className="bg-gray-100 rounded px-1 py-0.5 text-sm font-mono"
-                          {...props}
-                        />
-                      ) : (
-                        <code
-                          className="block bg-gray-100 rounded p-4 my-4 text-sm font-mono overflow-x-auto"
-                          {...props}
-                        />
-                      ),
-                    pre: ({ _node, ...props }: any) => (
-                      <pre
-                        className="bg-gray-100 rounded p-4 my-4 overflow-x-auto"
-                        {...props}
-                      />
-                    ),
-                    img: ({ _node, ...props }) => (
-                      <img
-                        className="rounded-lg shadow-md my-8 max-w-full"
-                        {...props}
-                      />
-                    ),
-                    hr: ({ _node, ...props }) => (
-                      <hr className="border-gray-200 my-8" {...props} />
-                    ),
-                  }}
-                >
-                  {content}
-                </ReactMarkdown>
-              </div>
-            </article>
-
-            <section className="bg-white rounded-2xl shadow-lg p-8">
-              <h2 className="text-3xl font-bold text-blue-900 mb-8 pb-4 border-b-2 border-gray-100">
-                登壇経験
-              </h2>
-              <ul className="space-y-8">
-                <li className="flex flex-col space-y-3 p-4 rounded-lg hover:bg-gray-50 transition-colors duration-200">
-                  <div className="flex items-center space-x-2">
-                    <span className="text-blue-600">📱</span>
-                    <a
-                      href="https://iosdc.jp/2020/"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="text-lg font-medium text-blue-600 hover:underline"
-                    >
-                      iOSDC Japan 2020
-                    </a>
-                  </div>
+          <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-10">
+            <ReactMarkdown
+              components={{
+                h1: ({ ...props }) => (
+                  <h1
+                    className="text-2xl font-bold mb-6 text-gray-900 pl-4 border-l-4 border-indigo-500"
+                    {...props}
+                  />
+                ),
+                h2: ({ ...props }) => (
+                  <h2
+                    className="text-xl font-bold mt-10 mb-4 text-gray-900 pl-4 border-l-4 border-indigo-300"
+                    {...props}
+                  />
+                ),
+                h3: ({ ...props }) => (
+                  <h3
+                    className="text-lg font-bold mt-6 mb-3 text-gray-800"
+                    {...props}
+                  />
+                ),
+                p: ({ ...props }) => (
+                  <p
+                    className="mb-4 text-gray-600 leading-relaxed text-sm"
+                    {...props}
+                  />
+                ),
+                ul: ({ ...props }) => (
+                  <ul className="mb-4 space-y-2" {...props} />
+                ),
+                ol: ({ ...props }) => (
+                  <ol
+                    className="list-decimal list-inside mb-4 text-gray-600 text-sm"
+                    {...props}
+                  />
+                ),
+                li: ({ ...props }) => (
+                  <li className="flex gap-3 items-start text-gray-600 text-sm">
+                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-indigo-400 flex-shrink-0" />
+                    <span {...props} />
+                  </li>
+                ),
+                blockquote: ({ ...props }) => (
+                  <blockquote
+                    className="border-l-4 border-indigo-200 pl-4 italic my-4 text-gray-500 text-sm"
+                    {...props}
+                  />
+                ),
+                a: ({ ...props }) => (
                   <a
-                    href="https://speakerdeck.com/entaku/droidkaigifalsegong-shi-ahuriteshi-meru-iosahuriosskomitutahefalsedao"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-gray-600 hover:text-blue-600 ml-7 flex items-center space-x-2"
-                  >
-                    <span>📊</span>
-                    <span>Speaker Deck</span>
-                  </a>
-                </li>
-                <li className="flex flex-col space-y-3 p-4 rounded-lg hover:bg-gray-50 transition-colors duration-200">
-                  <div className="flex items-center space-x-2">
-                    <span className="text-blue-600">🔄</span>
-                    <a
-                      href="https://cw-engineers.connpass.com/event/146975/"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="text-lg font-medium text-blue-600 hover:underline"
-                    >
-                      【増枠】Vue.jsアーキテクチャリング勉強会
-                    </a>
-                  </div>
-                  <a
-                    href="https://speakerdeck.com/entaku/vue-vuex-falseakitekutiyawan-quan-nili-jie-sita"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-gray-600 hover:text-blue-600 ml-7 flex items-center space-x-2"
-                  >
-                    <span>📊</span>
-                    <span>Speaker Deck</span>
-                  </a>
-                </li>
-                <li className="flex flex-col space-y-3 p-4 rounded-lg hover:bg-gray-50 transition-colors duration-200">
-                  <div className="flex items-center space-x-2">
-                    <span className="text-blue-600">📱</span>
-                    <a
-                      href="https://iosdc.jp/2021/"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="text-lg font-medium text-blue-600 hover:underline"
-                    >
-                      iOSDC Japan 2021
-                    </a>
-                  </div>
-                  <a
-                    href="https://speakerdeck.com/entaku/pickgo-for-partnerfalseyi-xing-fang-fa-karaxue-hu-ji-cun-falseneiteihuahuriwoflutterherihureisusurufang-fa"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-gray-600 hover:text-blue-600 ml-7 flex items-center space-x-2"
-                  >
-                    <span>📊</span>
-                    <span>Speaker Deck</span>
-                  </a>
-                </li>
-                <li className="flex flex-col space-y-3 p-4 rounded-lg hover:bg-gray-50 transition-colors duration-200">
-                  <div className="flex items-center space-x-2">
-                    <span className="text-blue-600">📱</span>
-                    <a
-                      href="https://iosdc.jp/2022/"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="text-lg font-medium text-blue-600 hover:underline"
-                    >
-                      iOSDC Japan 2022
-                    </a>
-                  </div>
-                  <a
-                    href="https://fortee.jp/iosdc-japan-2022/proposal/ee2ab807-9053-4779-84f9-ec9951f7cfc0"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-gray-600 hover:text-blue-600 ml-7 flex items-center space-x-2"
-                  >
-                    <span>👤</span>
-                    <span>Speaker Profile</span>
-                  </a>
-                </li>
-                <li className="flex flex-col space-y-3 p-4 rounded-lg hover:bg-gray-50 transition-colors duration-200">
-                  <div className="flex items-center space-x-2">
-                    <span className="text-blue-600">📱</span>
-                    <a
-                      href="https://iosdc.jp/2024/"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="text-lg font-medium text-blue-600 hover:underline"
-                    >
-                      iOSDC Japan 2024
-                    </a>
-                  </div>
-                  <a
-                    href="https://fortee.jp/iosdc-japan-2024/proposal/8c6f01d9-8fd3-4d5e-afef-f29d561f3c39"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-gray-600 hover:text-blue-600 ml-7 flex items-center space-x-2"
-                  >
-                    <span>👤</span>
-                    <span>Speaker Profile</span>
-                  </a>
-                </li>
-              </ul>
-            </section>
+                    className="text-indigo-600 hover:text-indigo-800 transition-colors"
+                    {...props}
+                  />
+                ),
+                hr: ({ ...props }) => (
+                  <hr className="border-gray-100 my-8" {...props} />
+                ),
+              }}
+            >
+              {content}
+            </ReactMarkdown>
           </div>
         )}
       </main>
 
-      <footer className="bg-white border-t border-gray-200 py-8 mt-16">
-        <div className="container mx-auto px-4 text-center text-gray-600">
-          Powered by entaku
+      <footer className="bg-gray-900 text-white py-12">
+        <div className="container mx-auto px-6 text-center">
+          <p className="text-lg font-black tracking-widest mb-2">ENTAKU</p>
+          <p className="text-gray-400 text-sm">Mobile App Developer</p>
         </div>
       </footer>
     </div>
