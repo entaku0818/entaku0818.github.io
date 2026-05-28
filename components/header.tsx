@@ -1,4 +1,5 @@
 import '@fortawesome/fontawesome-svg-core/styles.css'
+import type { JSX } from 'react'
 
 export const Header = (): JSX.Element => (
   <header className="fixed top-0 w-full z-50 bg-white border-b border-gray-100">

@@ -3,6 +3,7 @@ import '@fortawesome/fontawesome-svg-core/styles.css'
 import Header from '../components/header'
 import Article, { ArticleType } from '../data_class/article'
 import ArticleCard from '../components/articleCard'
+import type { JSX } from 'react'
 
 type Props = {
   articles: Article[]

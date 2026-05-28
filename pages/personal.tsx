@@ -2,6 +2,7 @@ import Head from 'next/head'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import Header from '../components/header'
 import { useEffect, useState } from 'react'
+import type { JSX } from 'react'
 import ReactMarkdown from 'react-markdown'
 
 export const Personal = (): JSX.Element => {
