@@ -13,8 +13,8 @@
   },
   "lint-staged": {
     "*.@(ts|tsx)": [
-      "yarn lint",
-      "yarn format"
+      "eslint",
+      "prettier --write"
     ]
   },
   "dependencies": {
